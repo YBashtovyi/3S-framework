@@ -1,2 +1,2 @@
 # 3S-framework
-Base framework for development ERP class solutions
+Base framework for development solutions of ERP class 
