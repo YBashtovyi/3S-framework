@@ -1,0 +1,11 @@
+<div ng-class="{'active':treeItem.isActive(treeItem.item)}">
+    <i class="fa fa-arrow-right" ng-click="treeItem.showNested(true)" ng-show="treeItem.item[treeItem.nestedField].length && !treeItem.isNestedVisible"></i>
+    <i class="fa fa-arrow-down" ng-click="treeItem.showNested(false)" ng-show="treeItem.item[treeItem.nestedField].length && treeItem.isNestedVisible"></i>
+    <i class="fa fa-circle" ng-show="!treeItem.item[treeItem.nestedField].length"></i>
+    <span ng-click="treeItem.onClick()">{{treeItem.item[treeItem.labelField]}}</span>
+</div>
+<div class="nested" ng-show="treeItem.item[treeItem.nestedField].length && treeItem.isNestedVisible" >
+    <div ng-repeat="nested in treeItem.item[treeItem.nestedField]">
+        <tree-item item="nested" parent="treeItem.item"></tree-item>
+    </div>
+</div>

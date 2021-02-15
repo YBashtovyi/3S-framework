@@ -1,0 +1,13 @@
+// Table's data
+export const SET_TABLE_DATA = 'SET_TABLE_DATA'
+export const FETCH_TEBLE_DATA = 'FETCH_TEBLE_DATA'
+
+// Table's pagination
+export const UPDATE_TABLE_PAGINATION = 'UPDATE_TABLE_PAGINATION'
+
+// Loading
+export const TABLE_LOADING_STARTED = 'TABLE_LOADING_STARTED'
+export const TABLE_LOADING_COMPLETED = 'TABLE_LOADING_COMPLETED'
+
+
+

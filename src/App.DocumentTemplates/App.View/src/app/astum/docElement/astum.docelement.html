@@ -1,0 +1,44 @@
+<div class="doc-element tooltip" ng-click="docEl.edit($event)"
+     ng-class="{
+     'nested':!!docEl.item.panel.parentId,
+     'doc-element__view':(docEl.mode==='View' && docEl.isEditable),
+     'doc-element__edit is-editing':docEl.mode==='Edit',
+     'label-block':docEl.item.panel.config.showName == 'block',
+     'inline-title':docEl.item.panel.config.showName == 'inline',
+     'label-hide':docEl.item.panel.config.showName == 'hide',
+     'block_elm':docEl.item.panel.controlTypeCode === 'SECTOR'
+     }">
+    <!--TODO: add tooltip as param in config-->
+    <!--<div class="tooltiptext" contenteditable="true">text text text</div>-->
+
+    <!--{{docEl.item.panel.config}}-->
+
+    <div class="actions" ng-show="docEl.mode==='View' && docEl.isEditable">
+        <button
+            title="Редагувати"
+            ng-hide="docEl.mode==='Edit'"
+            class="btn button button__edit-conten"
+            ng-click="docEl.setMode('Edit',$event)">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+        <button
+            title="Очистити"
+            class="btn button"
+            ng-click="docEl.clearElement()">
+            <i class="fa fa-times"></i>
+        </button>
+    </div>
+    <div class="actions" ng-show="docEl.mode!=='View' && docEl.isConfigurable">
+        <button
+            ng-hide="docEl.mode==='config'" class="btn button button__edit-conten"
+            ng-click="docEl.configure($event)">
+            <i class="fa fa-cog " aria-hidden="true"></i>
+        </button>
+        <button
+            ng-hide="docEl.mode==='Edit'"
+            class="btn button button__edit-conten"
+            ng-click="docEl.setMode('Edit',$event)">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+    </div>
+</div>

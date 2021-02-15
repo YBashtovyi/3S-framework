@@ -1,0 +1,2 @@
+export const SET_SIGNING_INFO     = 'SET_SIGNING_INFO'
+export const CLEAR_SIGNING_INFO   = 'CLEAR_SIGNING_INFO'

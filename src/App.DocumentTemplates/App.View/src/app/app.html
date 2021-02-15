@@ -1,0 +1,10 @@
+<nav  ng-if="!app.isEmbed">
+    <div>
+        <md-button ng-if="!app.isAuth" ng-click="app.login()">Увійти</md-button>
+        <md-button ng-if="app.isAuth" ng-click="app.logout()">Вийти</md-button>
+    </div>
+</nav>
+    <!-- content -->
+<div class="content">
+    <ui-view></ui-view>
+</div>

@@ -1,0 +1,25 @@
+<div class="tree-bar">
+    <div class="bar-left">
+        <div class="tree">
+            <md-progress-circular ng-if="tree.initialising" md-mode="indeterminate"></md-progress-circular>
+            <ul class="lexical-tree">
+                <li class="lexical-tree-item" ng-repeat="item in tree.tree">
+                    <astum-tree-item-configure item="item" />
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bar-right">
+        <div class="btn--group--shadow js-hide b-mrg">
+            <button class="btn btn--green btn--create " ng-click="tree.addNewItem()"><i class="mdi mdi-source-branch mdi-18px"></i>Додати в корінь</button>
+        </div>
+        <div class="new-item js-new-item">
+            <input class="input input-border margin-bottom" placeholder="Назва" type="text" ng-model="tree.itemName" />
+            <textarea class="input input-border margin-bottom" placeholder="Значення" ng-model="tree.itemContent"></textarea>
+            <button class="btn btn--green" ng-click="tree.postItem(tree.itemName,tree.itemContent)"><i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+            <button class="btn btn--white js-create-new" ng-click="tree.cancelAddingItem()"><i class="fa fa-close" aria-hidden="true"></i></button>
+        </div>
+    </div>
+
+</div>

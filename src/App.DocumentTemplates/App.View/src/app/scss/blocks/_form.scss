@@ -1,0 +1,72 @@
+.form {
+    width: 300px;
+    padding: 75px 15px 25px;
+    @include border-radius(2px);
+    border: 1px solid $lightgrey;
+    display: block;
+    top: 50%;
+    left: 50%;
+    @include translate ( -50%, -50% );
+    box-shadow: 0px 2px 2px 1px $light;
+    position: fixed;
+    height: auto;
+
+    &-group {
+        position: relative;
+        padding: 30px 0 0;
+    }
+
+    &-title {
+        background: $green;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        margin: 0;
+        padding: 20px 15px;
+        width: 100%;
+        color: $white;
+        font-size: 24px;
+        box-shadow: 0px 0px 0px 1px $green;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+    }
+    &-label {
+        position: absolute;
+        top: 40px;
+        @include transition (font-size, top 0.4s ease);  
+        font-size: 16px;
+        font-weight: 300;
+        color: $darkgrey;
+        pointer-events: none;
+    }
+    &-input {
+        width: 100%;
+        display: block;
+        border: none;
+        border-bottom: 2px solid $grey;
+        margin-bottom: 10px;
+        font-size: 16px!important;
+        padding: 8px 0!important;
+        @include transition(color, border-color 0.5s ease);     
+
+        &:focus,
+        &.ng-not-empty {
+            border-bottom-color: $darktext;
+            color: $darktext;
+        }
+
+        &:focus + .form-label {
+            top: 5px;
+            font-size: 12px;
+        }
+        
+        &.ng-not-empty + .form-label {
+            top: 5px;
+            font-size: 12px;
+        }
+    }
+    &-submit {
+        float: right;
+        margin-top: 10px;
+    }
+}

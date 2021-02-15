@@ -1,0 +1,78 @@
+.doc {
+
+  &-menu {
+    border-bottom: 2px solid #e1e5ed;
+
+    &--items {
+        min-height: unset;
+        background: #5f5f5f!important;
+        .active-icons .fa{
+          padding: 9px 5px;
+          cursor: pointer;
+          font-size: 18px !important;
+        }
+    }
+    &--item {
+        font-size: 12px;
+        text-transform: uppercase;
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+
+      &.active {
+        background: white;
+        color: black;
+        cursor: default;
+      }
+
+    }
+  }
+
+  &-toolbar {
+    padding: 16px!important;
+    
+    &-column{
+      flex-direction: column;
+    }
+
+    &--btn {
+      line-height: 24px;
+      padding: 4px 12px;
+      border-radius: 1px;
+      text-transform: lowercase;
+      letter-spacing: 0;
+      color: #2b2b2b;
+      font-size: 14px;
+      margin: 0;
+      font-family: $font-stack;
+        transition: background 0.3s ease;
+
+        &-group {
+          @extend .btn-group;
+          margin: 0;
+        }
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+      &[disabled="disabled"]{
+        background: transparent!important;
+        border: none!important;
+        box-shadow: none!important;
+        color: #b1b1b1 !important;
+        pointer-events: none;
+
+        .icon-svg {
+          fill: #b1b1b1 !important;
+        }
+      }
+    }
+  }
+}

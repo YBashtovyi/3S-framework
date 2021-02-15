@@ -1,0 +1,60 @@
+.header {
+  background: #f5f6fa;
+  border-bottom: 2px solid #e7e8ef;
+  padding: 10px 0;
+  width:100%;
+  display: inline-block;
+}
+.border-right {
+  border-right: 1px solid;
+}
+.icon-blok {
+  border-color: #e3e4ea;
+  line-height: 50px;
+  width: 52px;
+  text-align: center;
+  font-size: 30px;
+  border-width: 2px;
+
+  @extend .breadcrumb;
+
+  & a {
+    color: #4a4a4b;
+    line-height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 30px;
+    display: block;
+  }
+}
+.breadcrumb {
+  display: inline-block;
+
+  &-menu {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+
+
+    &-item {
+      float: left;
+      padding: 0 16px;
+
+      & a {
+        text-decoration: none;
+        color: #3c465a;
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        line-height: 46px;
+        display: block;
+
+        & .material-icons {
+          font-size: 28px;
+          padding-right: 8px;
+          line-height: 50px;
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+}

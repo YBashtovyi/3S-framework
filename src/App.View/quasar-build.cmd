@@ -1,0 +1,4 @@
+:: dev test prod
+set ENVIRONMENT_CONFIGURATION=%1
+quasar build
+echo %ENVIRONMENT_CONFIGURATION%

@@ -1,0 +1,24 @@
+<h3
+        class="doc-element__sectortitle">
+        <!--ng-class="{-->
+        <!--'label-block':docEl.item.panel.config.showName == 'block',-->
+        <!--'inline-title':docEl.item.panel.config.showName == 'inline',-->
+        <!--'label-hide':docEl.item.panel.config.showName == 'hide'-->
+     <!--}"-->
+<!--&gt;-->
+    {{docEl.item.panel.Name}}
+</h3>
+<div
+        class="nested"
+        ng-if="docEl.item.nested"
+>
+    <astum-doc-element ng-repeat="nesteditem in docEl.item.nested"
+                       class="nested-item"
+                       item="nesteditem"
+                       t-index ="$index"
+                       parent-index="docEl.pathIndex"
+                       is-doc-valid="docEl.isDocValid"
+                       is-frame="docEl.isFrame"
+                       parent-config="docEl.item.panel.config">
+    </astum-doc-element>
+</div>

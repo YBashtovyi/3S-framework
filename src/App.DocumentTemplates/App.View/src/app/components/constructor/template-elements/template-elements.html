@@ -1,0 +1,18 @@
+<div class="template-slot-actions" droppable>
+    <div class="template-slot pull-left div-icon btn btn--green" ng-class="{'disabled':template.isInsertMode}" ng-if="!template.addingInProgress" ng-click="template.addElement($event)">
+        <i class="div-icon-element material-icons">note_add</i>
+        Додати елемент
+    </div>
+    <div class="template-slot pull-left div-icon btn btn--green"  ng-if="template.addingInProgress">
+        <i class="div-icon-element material-icons">note_add</i>
+        Новий елемент
+    </div>
+</div>
+<template-element
+        ng-repeat="row in template.elements track by $index"
+        on-change="template.onElementChange(event)"
+        index="$index"
+        item="row"
+        parent-config = "template.parentConfig"
+        ng-class="{'med-block':!template.parentConfig||template.parentConfig&&!template.parentConfig.inline}"
+></template-element>

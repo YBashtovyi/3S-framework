@@ -1,0 +1,68 @@
+# Visual Studio cache/options directory
+*.vs/
+# Visual Studio Code
+src/.vscode
+.vscode/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build & pack results
+[Dd]ebugPublic/
+[Rr]eleases/
+[Tt]ools/
+
+# Packages
+packages/
+# TestResults
+TestResults/
+
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Xx][Mm][Ll][Dd]ocumentation/
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!*.[Cc]ache/
+
+# Typescript v1 declaration files
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/Properties/launchSettings.json
+
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+*.dbmdl

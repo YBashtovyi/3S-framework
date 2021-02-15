@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>App.Business</AssemblyName>
+    <RootNamespace>App.Business</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Lookups\**" />
+    <EmbeddedResource Remove="Lookups\**" />
+    <None Remove="Lookups\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BarcodeLib" Version="2.2.5" />
+    <PackageReference Include="IdentityModel" Version="4.5.0" />
+    <PackageReference Include="MailKit" Version="2.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Antiforgery" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="3.1.9" />
+    <PackageReference Include="ncrontab" Version="3.3.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\submodules\app.core\src\Core.Mvc\Core.Mvc.csproj" />
+    <ProjectReference Include="..\..\submodules\app.core\src\Core\Core.csproj" />
+    <ProjectReference Include="..\App.Data\App.Data.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+
+    <!--<ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Mvc.ViewFeatures">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.viewfeatures\2.0.1\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.ViewFeatures.dll</HintPath>
+    </Reference>
+  </ItemGroup>-->
+</Project>

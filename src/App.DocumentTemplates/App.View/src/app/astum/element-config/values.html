@@ -1,0 +1,14 @@
+<div ng-switch="cfg.config.attributeTypeCode">
+    <div ng-switch-when="LEXTREE">
+        <astum-tree-configure values-tree-id="cfg.config.valuesTreeId"
+                            attribute-type-code="cfg.config.attributeTypeCode"></astum-tree-configure>
+    </div>
+    <div ng-switch-when="CHECKLIST">
+        <astum-list-configure values-tree-id="cfg.config.valuesTreeId"
+                              attribute-type-code="cfg.config.attributeTypeCode"><astum-list-configure />
+    </div>
+    <div ng-switch-when="TEXT">
+        <astum-list-configure values-tree-id="cfg.config.valuesTreeId"
+                              attribute-type-code="cfg.config.attributeTypeCode"><astum-list-configure />
+    </div>
+</div>

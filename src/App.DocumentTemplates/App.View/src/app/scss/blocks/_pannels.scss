@@ -1,0 +1,176 @@
+.panel {
+    display: block;
+    cursor: pointer;
+    //padding: 0 8px;
+    &.textarea.panel--value {
+        background: $white;
+    }
+
+    &-docs {
+        min-height: 16px;
+        line-height: 16px;
+        margin-bottom: 4px;
+
+        &--white {
+            background-color: $white;
+        }
+    }
+
+    & .label {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #3c465a;
+        padding: 0 8px 0 0px;
+        display: inline-block;
+
+        &.node-active {
+            font-weight: bold;
+            color: $green;
+        }
+
+        &.panel--name {
+            font-weight: bold !important;
+        }
+    }
+
+    & .value {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+        color: $darktext;
+        display: inline-block;
+        word-wrap: break-word;
+        max-width: 100%;
+
+        & .material-icons {
+            color: $darkgrey;
+            font-size: 16px;
+        }
+    }
+
+    & input.value {
+        display: block;
+        width: 100%;
+    }
+
+    & .docs-block {
+        width: 100%;
+        display: inline-block;
+        overflow-x: hidden;
+        //padding: 0 8px;
+        & .new-item {
+
+            & .input {
+                display: block;
+                resize: none;
+                width: 100%;
+            }
+        }
+
+        & .btn--small {
+
+            & .mdi {
+                line-height: 6px;
+                min-height: unset;
+                font-size: 11px;
+                text-align: center;
+
+                &:before {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        & .textarea {
+            width: 100%;
+        }
+
+        & .btn--white {
+            & .mdi-window-close {
+                color: #ff0000;
+            }
+        }
+    }
+}
+
+md-toolbar.md-default-theme.md-hue-1:not(.md-menu-toolbar),
+md-toolbar.md-hue-1:not(.md-menu-toolbar) {
+    //background-color: #fff;
+    background-color: transparent;
+    color: #3c465a;
+    min-height: unset;
+    height: auto;
+    padding: 16px 0 16PX;
+}
+
+md-select.md-default-theme .md-select-value, md-select .md-select-value {
+    border-bottom-color: $darkgrey;
+}
+
+.md-select-value .md-select-icon {
+    width: auto;
+    margin: 0 4px;
+    font-size: 14px;
+}
+
+.md-button.md-raised {
+    min-width: 40px;
+    min-height: 40px;
+    margin: 0;
+}
+
+.md-button.md-raised .material-icons {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    font-size: 16px;
+}
+
+.checkbox.checkbox--green {
+    display: inline-block;
+}
+
+.head--content {
+    z-index: 1;
+    position: relative;
+    margin: 0 0px 16px;
+    padding: 0 18px;
+}
+
+.checkbox--inline {
+    display: inline-block;
+
+    & .panel--list {
+        margin: 0;
+        padding: 0;
+
+        & .panel--list--item {
+            display: inline-block;
+            padding: 0 8px;
+        }
+    }
+}
+
+.mdi-text {
+    padding-right: 8px;
+}
+
+.content.input.input-border {
+    color: #3c465a;
+    padding: 8px 10px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    min-height: 40px;
+    display:inline-block;
+}
+
+textarea.input.input-border {
+    display: block;
+    resize: none;
+    width: 100%;
+}

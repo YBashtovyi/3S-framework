@@ -1,0 +1,21 @@
+<!--<div class="tooltip"  ng-hide="control.editMode">
+    <div class="tooltiptext" contenteditable="true">Підкреслити необхідне</div>-->
+<ul class="checklist checklist-inline tooltip">
+    <li class="checklist--item" ng-repeat="item in control.items">
+        <md-checkbox class="checkbox checkbox--green list--checkbox" ng-change="control.onChange()" ng-model="item.checked">
+            {{item.caption}}
+        </md-checkbox>
+    </li>
+</ul>
+<!--</div>-->
+<!--<div ng-if="control.editMode">
+    <ul class="checklist checklist-inline-cancel">
+        <li class="checklist--item box" ng-repeat="item in control.items">{{item.Name}}
+        <button class="btn button" type="button" ng-click="control.deleteValue(item)">
+            <i class="fa fa-times"></i></button></li>
+        <li class="checklist--item">
+            <input class="input input-border item-input" type="text" ng-model="checkValue" placeholder="Введіть значення"/>
+            <button class="btn button" type="button" ng-click="control.addValue(checkValue)"><i class="fa fa-floppy-o"></i></button>
+        </li>
+    </ul>
+</div>-->

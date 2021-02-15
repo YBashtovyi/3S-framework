@@ -1,0 +1,176 @@
+.checkbox {
+
+    &.md-checked {
+        .md-label {
+            span {
+                // text-decoration: underline;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+.checklist {
+    // position: relative;
+    // z-index: 1357;
+    // top: 100%;
+    // margin: 0;
+    // margin-bottom:5px;
+    // left: 0;
+    // width: 100%;
+    // padding: 0;
+    // list-style: none;
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: inherit;
+    padding-left: 8px;
+    md-checkbox .md-container {
+        top: 0px;
+        transform: none;
+    }
+    
+    .md-label {
+        width: 100%;
+        margin: 0;
+        padding-left: 30px;
+    }
+
+    .checkbox.list--checkbox {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: normal;
+
+        span {
+            display: block;
+            width: 100%;
+            white-space: normal;
+            word-wrap: break-word;
+        }
+    }
+
+    &--item {
+        // font-size: 14px;
+        // font-family: "Open Sans", sans-serif;
+        // font-weight: normal;
+        // line-height: 20px;
+        // margin-bottom: 4px;
+        // padding-left: 35px;
+        // position: relative;
+        padding: 0;
+        margin-right: 8px;
+        width: auto;
+        white-space: nowrap;
+        word-wrap: break-word;
+        height: auto;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: normal;
+        margin-bottom: 12px;
+    }
+
+    &.checklist-inline {
+
+        &-cancel {
+
+            & .checklist--item {
+                // padding-left: 0px;
+                // padding-right: 10px;
+                // position: relative;
+                // display: inline;
+                // line-height: 20px;
+                padding: 0;
+                margin-right: 0;
+                width: auto;
+                white-space: nowrap;
+                word-wrap: break-word;
+                height: auto;
+                display: flex;
+                flex-flow: column wrap;
+                align-items: normal;
+                margin-bottom: 12px;
+
+                &.box {
+                    background-color: aliceblue;
+                    box-sizing: border-box;
+                    padding: 0 0 0 10px;
+                    display: inline-block;
+                    vertical-align: bottom;
+                    margin-right: 5px;
+                }
+
+                button.red-text {
+                    position: absolute;
+                    top: 4px;
+                    line-height: 20px;
+                    left: 0;
+                    padding: 0;
+                    width: 20px;
+                    -webkit-transform: none;
+                    -moz-transform: none;
+                    -ms-transform: none;
+                    -o-transform: none;
+                    transform: none;
+
+                    i {
+                        font-weight: 300;
+                        -webkit-transition: font-weight 0.3s ease;
+                        -moz-transition: font-weight 0.3s ease;
+                        -ms-transition: font-weight 0.3s ease;
+                        -o-transition: font-weight 0.3s ease;
+                        transition: font-weight 0.3s ease;
+                    }
+
+
+                    &:hover i {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        & .checklist--item {
+            // padding: 0;
+            // display: inline;
+            // margin-right: 16px;
+        }
+    }
+}
+
+.astum-check-list {
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.3);
+    padding: 8px;
+    position: absolute;
+    background: #fff;
+}
+
+button.red-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 14px;
+    left: 0;
+    padding: 0;
+    width: 35px;
+
+    & .material-icons {
+        font-size: 16px;
+        line-height: 14px;
+    }
+}
+
+.item-input {
+    vertical-align:middle;
+    margin-bottom:4px;
+
+}
+
+.btn--small {
+    & .material-icons {
+        font-size: 16px;
+    }
+}

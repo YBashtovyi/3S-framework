@@ -1,0 +1,93 @@
+.md {
+  &-select {
+    &-icon{
+      position: relative;
+
+    }
+    &-value {
+        color: $darktext;
+        border: none;
+        &:hover {
+          span {
+          }
+        }
+
+      span {
+        font-size: 14px;
+        letter-spacing: 0;
+        font-family: Open Sans, sans-serif;
+        text-transform: lowercase;
+        color: $darktext;
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    &-placeholder{
+
+      span {
+        color: $darktext;
+      }
+    }
+  }
+}
+.select {
+    width: 240px;
+
+  &-container {
+    padding: 4px 4px 3px 12px;
+    width: 100%;
+    transition: background 0.3s ease;
+        background: #f5f5f5;
+
+    &.md-input-has-value,
+    &:hover,
+    &:active,
+    &:focus {
+
+        background: #ececec;
+    }
+
+  }
+}
+
+md-select-menu._md {
+  box-shadow: rgb(225, 229, 237) 0px 0px 0px 1px!important;
+}
+md-content._md {
+  box-shadow: none!important;
+  background: #f2f2f2!important;
+  padding: 0!important;
+
+  &:hover {
+
+  }
+
+  md-option {
+    padding: 8px 12px;
+    height: auto;
+    font-size: 14px;
+    text-decoration: none!important;
+    font-style: normal!important;
+    font-family: Open Sans, sans-serif;
+  }
+  md-option .md-text,
+  md-option .md-text em{
+    height:20px;
+    font-size: 14px;
+    line-height:20px;
+    color: $darktext;
+    font-family: "Open Sans", sans-serif;
+      font-style: normal;
+
+  }
+}
+
+md-select-menu.md-default-theme md-content md-option:not([disabled]):focus,
+md-select-menu md-content md-option:not([disabled]):focus,
+md-select-menu.md-default-theme md-content md-option:not([disabled]):hover,
+md-select-menu md-content md-option:not([disabled]):hover {
+    background: #e6e6e6;
+}

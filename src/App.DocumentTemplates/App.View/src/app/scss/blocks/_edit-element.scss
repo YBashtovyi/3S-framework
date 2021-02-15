@@ -1,0 +1,19 @@
+.editable {
+    width: 100%;
+    display: block;
+
+    &-element {
+    }
+
+    &-value {
+        width: 100%;
+        display: block;
+        padding-left: .5em;
+
+        &--panel {
+        }
+
+        &--default {
+        }
+    }
+}

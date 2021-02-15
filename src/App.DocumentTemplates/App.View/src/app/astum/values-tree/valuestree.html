@@ -1,0 +1,15 @@
+<form name="vt.valuesTreeForm" id="valuesTreeForm" ng-submit="vt.save()">
+    <div>
+        <label class="label" for="Name">Назва:</label>
+        <input ng-required="true" class="input input-border" type="text" name="Name" id="Name" ng-model="vt.valuesTreeModel.Name" />
+    </div>
+    <div>
+        <label class="label" for="code">Код:</label>
+        <input ng-required="true" class="input input-border" type="text" name="code" id="code" ng-model="vt.valuesTreeModel.code" />
+    </div>
+    <div class="btn--group">
+        <button class="btn btn--green" type="submit" form="valuesTreeForm"><i class="material-icons">save</i></button>
+        <button class="btn btn--white" type="button" ng-click="vt.cancel()"><i class="material-icons">close</i></button>
+    </div>
+</form>
+{{vt.config}}

@@ -1,0 +1,213 @@
+﻿$secondary-color: #1ec8c8;
+$spacing: 10px;
+$icon-width: 40px;
+$header-height: 40px;
+$header-height-spacing: 40px;
+$calendar-width: 600px;
+$border-color: rgba(0, 0, 0, 0.1);
+$border-radius: 3px;
+$selected-day: rgba(0, 0, 0, 0.03);
+$arrows-color: rgba(0, 0, 0, 0.55);
+$different-month-color: rgba(0,0,0,0.2);
+$different-month-bg: rgba(25,2,0,0.02);
+$week-day-name-color: rgba(0,0,0,0.7);
+$week-names-bg: rgba(30, 200, 200, 0.08);
+$icon-hover-color: rgba(0, 0, 0, 0.9);
+$icon-hover-bg: rgba(255, 255, 255, 0.45);
+$header-margin:0;
+
+.another-items {
+    color: $different-month-color;
+    background: $different-month-bg;
+    cursor: default;
+}
+
+.clearfix {
+    clear: both;
+
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.calendar {
+    float: left;
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background: white;
+    width: $calendar-width;
+    box-shadow: inset 0 0 0 1px $border-color;
+    margin-bottom: 10px;
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    &-zoom {
+        margin: $header-margin;
+        padding: 0 10px;
+        color: #fff;
+        font-weight: 300;
+        position: relative;
+    }
+
+    &-header {
+        width: 100%;
+        background: $secondary-color;
+        height: $header-height;
+        color: white;
+        text-align: center;
+
+        & * {
+            height: $header-height-spacing;
+            line-height: $header-height-spacing !important;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        & i {
+
+            font-size: 1.125em;
+            font-weight: bold;
+            position: relative;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            padding: 0 $spacing;
+            cursor: pointer;
+            color: $arrows-color;
+
+            &:hover {
+                color: $icon-hover-color;
+                background: $icon-hover-bg;
+            }
+        }
+
+
+
+        & .fa-arrow-circle-left {
+            margin: $header-margin;
+            float:left;
+        }
+
+
+        & .fa-arrow-circle-right {
+            margin: $header-margin;
+            float: right;
+        }
+
+
+        & span {
+            float: left;
+            width: 100%;
+            font-weight: bold;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            color: inherit;
+        }
+    }
+}
+
+.week {
+    width: 100%;
+    background: white;
+
+    &-names {
+        cursor: default;
+        min-height: 50px;
+        margin: 0 auto;
+        padding: 0 2% 0 2%;
+        background: $week-names-bg;
+        border-bottom: 1px solid rgba(0,0,0,0.02);
+    }
+
+    &-day {
+
+        &-name {
+            width: 12.2%;
+            font-weight: 500;
+            font-size: 11.5px;
+            padding: 10px 0.5%;
+            float: left;
+            text-align: center;
+            color: $week-day-name-color;
+            margin: 5px 1%;
+        }
+
+        &-date {
+            cursor: pointer;
+            font-size: 12.5px;
+            width: 12.2%;
+            margin: 5px 1%;
+            padding: 1.5% 0;
+            float: left;
+            -webkit-border-radius: 1px;
+            -moz-border-radius: 1px;
+            border-radius: 1px;
+
+            &.today {
+                background: $week-names-bg;
+            }
+
+            &:hover {
+                background: $selected-day;
+            }
+            &.selected {
+                background: $secondary-color;
+            }
+        }
+    }
+
+    &-dates {
+        padding: 0 2%;
+        text-align: center;
+    }
+}
+
+.different-month {
+    @extend .another-items;
+}
+
+.next-year {
+    @extend .another-items;
+}
+
+.years,
+.months {
+    width: 100%;
+    background: #fff;
+    padding: 0 2%;
+    text-align: center;
+
+    &-names {
+        width: 23%;
+        cursor: pointer;
+        font-size: 12.5px;
+        margin: 5px 1%;
+        padding: 1.5% 0;
+        float: left;
+        border-radius: 1px;
+        padding: 3% 0;
+        line-height: 155%;
+
+        &:hover {
+            background: rgba(0,0,0,0.03);
+        }
+
+        &.selected {
+            background: rgba(0,0,0,0.03);
+        }
+    }
+}
+
+.current {
+    background: rgba(255,255,255,0.3);
+    border-radius: $border-radius;
+}

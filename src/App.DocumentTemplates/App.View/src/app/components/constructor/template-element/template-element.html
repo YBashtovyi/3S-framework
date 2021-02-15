@@ -1,0 +1,216 @@
+<div class="template-row" droppable ng-class="{'active-parent':elCtl.isActive}">
+    <div  ng-show="elCtl.item" draggable class="template-element" ng-class="{'active':elCtl.isActive}">
+        <div class="template-element-icons-holder">
+            <div class="template-element-icons btn--group">
+                <button
+                        class="btn btn--darkgreen"
+                        type="button" ng-click="elCtl.switchShowInlineBlock($event,true)"
+                        title="Відкрити панель параметрів"
+                        ng-if="elCtl.narrowBlock"
+                >
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <button
+                        class="btn btn--darkgreen"
+                        type="button" ng-click="elCtl.edit($event)"
+                        title="внести зміни"
+                        ng-if="!elCtl.narrowBlock"
+                >
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button
+                        class="btn btn--darkgreen"
+                        type="button" ng-show="elCtl.item.id" ng-click="elCtl.copy($event)"
+                        title="копіювати"
+                        ng-if="!elCtl.narrowBlock"
+                >
+                    <i class="fa fa-clone"></i>
+                </button>
+                <button
+                        class="btn btn--darkgreen"
+                        type="button"
+                        ng-show="elCtl.item.id"
+                        ng-click="elCtl.copyToTemplate($event)"
+                        title="копіювати в шаблон"
+                        ng-if="!elCtl.narrowBlock"
+                >
+                    <i class="fa fa-clipboard"></i>
+                </button>
+                <button
+                        class="btn btn--darkred"
+                        type="button"
+                        ng-click="elCtl.dialogRemove($event)"
+                        title="видалити елемент"
+                        ng-if="!elCtl.narrowBlock"
+                >
+                    <i class="fa fa-times"></i>
+                </button>
+                <div class="template-element-dialog" ng-if="elCtl.dialog">
+                    <p>Підтвердження видалення</p>
+                    <div class="btn--group">
+                        <button
+                                class="btn btn--darkred"
+                                type="button"
+                                ng-click="elCtl.removeElement($event)"
+                                title="Підтвердження видалення"
+                      >
+                            <i class="fa fa-check"></i>
+                        </button>
+                        <button
+                                class="btn btn--darkgreen"
+                                type="button" ng-click="elCtl.cancelRemove($event)"
+                                title="Відміна видалення"
+                      >
+                            <i class="fa fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+                <button
+                        class="btn btn--darkgreen"
+                        ng-show="elCtl.item.controlTypeCode==='SECTOR'"
+                        ng-click="elCtl.setInlineSector($event)"
+                        title="{{elCtl.item.config.inline ? 'Вертикальне' : 'Горизонтальне'}} розміщення вкладених елементів"
+                        ng-if="!elCtl.narrowBlock"
+                >
+                    <i class="{{elCtl.item.config.inline ? 'fa fa-ellipsis-v':'fa fa-ellipsis-h'}}"></i>
+                </button>
+                <button
+                        class="btn btn--darkgreen"
+                        ng-show="elCtl.parentConfig.inline"
+                        ng-click="elCtl.changeWidth($event,false)"
+                        title="Зменшити елемент"
+                        ng-if="!elCtl.narrowBlock"
+                >
+                    <i class="fa fa-minus-square-o"></i>
+                </button>
+                <button
+                        class="btn btn--darkgreen"
+                        ng-show="elCtl.parentConfig.inline"
+                        ng-click="elCtl.changeWidth($event,true)"
+                        title="Збільшити елемент"
+                        ng-if="!elCtl.narrowBlock"
+                >
+                    <i class="fa fa-plus-square-o"></i>
+                </button>
+                <button
+                        class="btn btn--darkgreen move-template"
+                        type="button"
+                        title="перемістити"
+                >
+                    <i class="fa fa-arrows"></i>
+                </button>
+            </div>
+        </div>
+        <dl>
+            <dt>Тип:</dt>
+            <dd>{{elCtl.item.controlTypeCode}}</dd>
+            <dt>Назва:</dt>
+            <dd>{{elCtl.item.caption}}</dd>
+            <dt>code:</dt>
+            <dd>{{elCtl.item.code}}</dd>
+            <!--<dd>{{elCtl.item.id}}</dd>-->
+
+        </dl>
+    </div>
+    <div ng-show="elCtl.item.controlTypeCode==='SECTOR'" class="nested" ng-class="{'inline': elCtl.item.config.inline}">
+        <template-elements
+                on-change="elCtl.onElementsChange(event)"
+                elements="elCtl.item.templateElements"
+                parent-config="elCtl.item.config"
+                ng-class="{'parent-inline':elCtl.item.config.inline}"
+        >
+        </template-elements>
+    </div>
+</div>
+<div class="med-alert" ng-if="elCtl.maxWidth">
+    <p>Ширина вкладених елементів перевищує ширину сектора</p>
+</div>
+<div class="med-alert" ng-if="elCtl.minWidth">
+    <p>Мінімальна ширина елементу</p>
+</div>
+<div
+        class="template-element-inline-copy"
+        ng-show="elCtl.showInlineBlock&&elCtl.narrowBlock"
+>
+    <div class="template-element-icons-holder">
+        <div class="template-element-icons btn--group">
+            <button
+                    class="btn btn--darkgreen"
+                    type="button" ng-click="elCtl.switchShowInlineBlock($event,false)"
+                    title="Закрити панель параметрів"
+                    ng-if="elCtl.narrowBlock"
+          >
+                <i class="fa fa-caret-up"></i>
+            </button>
+
+            <button
+                    class="btn btn--darkgreen"
+                    type="button" ng-click="elCtl.edit($event)"
+                    title="внести зміни"
+          >
+                <i class="fa fa-edit"></i>
+            </button>
+            <button
+                    class="btn btn--darkgreen"
+                    type="button" ng-show="elCtl.item.id" ng-click="elCtl.copy($event)"
+                    title="копіювати"
+          >
+                <i class="fa fa-clone"></i>
+            </button>
+            <button
+                    class="btn btn--darkgreen"
+                    type="button"
+                    ng-show="elCtl.item.id" ng-click="elCtl.copyToTemplate($event)"
+                    title="копіювати в шаблон"
+          >
+                <i class="fa fa-clipboard"></i>
+            </button>
+            <button
+                    class="btn btn--darkred"
+                    type="button"
+                    ng-click="elCtl.dialogRemove($event)"
+                    title="видалити елемент"
+          >
+                <i class="fa fa-times"></i>
+            </button>
+            <button
+                    class="btn btn--darkgreen"
+                    ng-show="elCtl.item.controlTypeCode==='SECTOR'"
+                    ng-click="elCtl.setInlineSector($event)"
+                    title="{{elCtl.item.config.inline ? 'Вертикальне' : 'Горизонтальне'}} розміщення вкладених елементів"
+          >
+                <i class="{{elCtl.item.config.inline ? 'fa fa-ellipsis-v':'fa fa-ellipsis-h'}}"></i>
+            </button>
+            <button
+                    class="btn btn--darkgreen"
+                    ng-show="elCtl.parentConfig.inline"
+                    ng-click="elCtl.changeWidth($event,false)"
+                    title="Зменшити елемент"
+          >
+                <i class="fa fa-minus-square-o"></i>
+            </button>
+            <button
+                    class="btn btn--darkgreen"
+                    ng-show="elCtl.parentConfig.inline"
+                    ng-click="elCtl.changeWidth($event,true)"
+                    title="Збільшити елемент"
+          >
+                <i class="fa fa-plus-square-o"></i>
+            </button>
+
+        </div>
+    </div>
+    <dl>
+        <dt>Тип:</dt>
+        <dd>{{elCtl.item.controlTypeCode}}</dd>
+        <span class="parent-inline-separator"></span>
+        <dt>Назва:</dt>
+        <dd>{{elCtl.item.caption}}</dd>
+        <span class="parent-inline-separator"></span>
+        <dt>code:</dt>
+        <dd>{{elCtl.item.code}}</dd>
+        <!--<dd>{{elCtl.item.id}}</dd>-->
+        <span class="parent-inline-separator"></span>
+    </dl>
+</div>
+

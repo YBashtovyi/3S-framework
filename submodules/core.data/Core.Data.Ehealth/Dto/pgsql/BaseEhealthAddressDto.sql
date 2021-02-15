@@ -1,0 +1,20 @@
+﻿SELECT x.id, 
+    x.caption,
+	COALESCE(x.type_code, '') as type_code,
+	COALESCE(x.country_code,  '') as country_code,
+	COALESCE(x."area", '') as "area",
+	COALESCE(x.region, '') as region,
+	COALESCE(x.settlement,  '') as settlement,
+	COALESCE(x.settlement_type_code, '') as settlement_type_code,
+	COALESCE(x.settlement_id, '') as settlement_id,
+	COALESCE(x.region_id, '') as region_id,
+	COALESCE(x.area_id, '') as area_id,
+	COALESCE(x.street_id, '') as street_id,
+	COALESCE(x.street_type_code, '') as street_type_code,
+	COALESCE(x.street, '') as street,
+	COALESCE(x.building, '') as building,
+	COALESCE(x.apartment, '') as apartment,
+	COALESCE(x.zip, '') as zip,
+	x.entity_id
+FROM ehd_address x
+WHERE x.record_state <> 4

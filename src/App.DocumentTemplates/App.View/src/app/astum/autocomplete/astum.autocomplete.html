@@ -1,0 +1,21 @@
+<div class="field"> 
+    <input type="text" ng-model="control.inputText" ng-model-options="{debounce:300}" />
+    <i class="fa fa-times" ng-click="control.clear()" ng-show="control.isActive && control.inputText"></i>
+</div>
+<div ng-show="control.showList" class="autocomplete-body">
+    <ul ng-if="control.list.length">
+        <li ng-repeat="item in control.list">
+            <a ng-click="control.onItemClick(item)">
+                {{item[control.label]}}
+            </a>
+        </li>
+    </ul>
+    <ul ng-if="!control.list.length">
+        <li>
+            <a>
+                No Data
+            </a>
+        </li>
+    </ul>
+</div>
+

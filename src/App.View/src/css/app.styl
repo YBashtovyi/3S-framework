@@ -1,0 +1,356 @@
+
+@import "~assets/icon-font/telemed/style.styl"
+
+/* app global css */
+[disabled]{
+  pointer-events: none
+}
+a{
+  text-decoration: none
+}
+ol, ul{
+  list-style: none
+}
+/* color helpers */
+.bg-primary-gradient{
+  gradient(1)
+}
+.bg-primary-gradient-bottom{
+  gradient-bottom(1)
+}
+.bg-primary-gradient-diagonal{
+  gradient-diagonal(1)
+}
+.bg-primary-light{
+  background-color: $primary-light!important
+}
+.bg-primary-dark-light{
+  background-color: $primary-dark-light!important
+}
+.bg-negative-light{
+  background-color: $negative-light
+}
+.bg-positive-light{
+  background-color: $positive-light
+}
+.bg-warning-light{
+  background-color: $warning-light
+}
+.bg-transparent{
+  background-color: transparent
+}
+.text-white *{
+  color: #f5f5f5
+  }
+.text-black{
+  color: #333
+  }
+
+/* custom scrollbar */
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #c1c1c1
+}
+body::-webkit-scrollbar-thumb:hover{
+  background-color: $grey-6
+}
+/* detail card */
+.more-btn .q-btn--fab {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+.text-subtitle2
+  line-height: 1.2
+
+textarea[disabled]
+  cursor: default!important
+  pointer-events: none!important
+
+/* table styles */
+.q-table tbody td
+  font-size: 14px
+  height: 40px
+  white-space: pre-wrap
+  word-wrap: break-word
+
+.q-table tbody tr:hover{
+  background-color: lighten($primary, 90%)
+  }
+
+.q-table tbody tr:first-child .table-btn-actions{
+  position: relative;
+    &:before{
+      position: absolute;
+      content: '';
+      top: -1px;
+      height 1px
+      border-top: 1px solid rgba(0,0,0,0.12);
+      background-color: transparent
+  }
+}
+.q-table tbody tr:hover td:before{
+  background-color: transparent
+  }
+.custom-dtable  thead tr th:first-child{
+  padding: 0
+  td, div{
+    opacity: 0;
+    visibility: hidden;
+  }
+
+}
+
+.q-table__top
+  //min-height: 36px
+  padding: 0
+
+.q-table th,
+.q-table td
+  padding: 10px 12px
+  white-space: pre-wrap
+  word-wrap: break-word
+
+.q-table th
+  vertical-align: baseline
+
+.q-table__top
+  background-color: transparent
+  color: #333
+
+.q-table__top  .q-field__inner *
+  color: #333
+
+.stripe-table tbody tr:nth-child(odd)
+  //background-color: lighten($primary, 90%)
+
+.dense-multiple .q-table--col-auto-width
+  padding: 0 12px
+
+tr.active
+  background-color: lighten($primary, 70%)
+
+.q-field--with-bottom
+  padding-bottom: 0
+  .q-field__bottom
+    padding-top: 2px
+
+.table-expanded_row{
+    background-color: $primary-light
+    td{
+      height: auto;
+      div{
+        //height: 30px
+      }
+    }
+  }
+
+/*accordion styles*/
+.q-expansion-item--expanded .expansion-item-header
+  background-color: $primary
+
+.q-expansion-item--expanded .expansion-item-header *
+  color: white
+
+.q-expansion-item--expanded > .q-expansion-item__container > .expansion-inner-item-header
+  background-color: $grey-6
+
+.q-expansion-item--expanded > .q-expansion-item__container > .expansion-inner-item-header *
+  color: white
+
+/* search form elements */
+.search-field {
+  &.multi-select {
+    .q-field__control {
+      height: auto;
+    }
+  }
+
+  .q-radio__label{
+    font-size: 13px;
+    line-height: 1.1
+  }
+
+  .q-field__control {
+    min-height: 30px !important;
+    height: 30px;
+  }
+
+  .q-field__native {
+    min-height: 30px !important;
+    padding: 0 !important;
+
+    span {
+      font-size: 12px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  .q-field__control-container {
+    padding: 0 !important;
+  }
+
+  .q-field--dense .q-field__label {
+    font-size: 12px;
+  }
+
+  .q-field__label {
+    font-size: 12px;
+    top: 5px;
+  }
+
+  .q-field__marginal {
+    min-height: 30px;
+    height: 30px;
+  }
+
+  &_input {
+    font-size: 12px;
+    padding-top: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.search-options {
+  font-size: 12px;
+  width: 300px;
+
+  .q-item {
+    padding: 2px 10px !important;
+  }
+}
+
+.filter-caption
+  @media (min-width $breakpoint-xs-max)
+    font-size: 13px
+    color: $grey-7
+    line-height: 1.1
+    width: 200px
+  @media (max-width $breakpoint-xs-max)
+    font-size: 13px
+    color: $grey-7
+    line-height: 1.1
+    width: 120px
+
+.search-form{
+  .q-field--dense .q-field__before, .q-field--dense .q-field__prepend{
+    padding-right: 0
+    }
+}
+
+/* form elements */
+.selected-options{
+  background-color: $primary-light
+}
+
+.q-date__today {
+  background-color: $grey-3;
+  border: 1px solid $grey-5;
+  box-shadow: none;
+}
+
+/* fade effects */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .35s ease;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+/* wrappers */
+.container {
+  max-height: 70%;
+  min-width: 400px;
+  min-height: 600px;
+  height: 100%;
+}
+.fs-card
+  @media (min-width $breakpoint-xs-max)
+    width 80vw
+  @media (max-width $breakpoint-xs-max)
+    position: fixed
+    top: 0
+    left: 0
+    min-height: 100vh
+    min-width: 100vw
+    max-width: 100vw
+
+/* bottom notification in card */
+.notify-card
+  .notify-card-inner
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: center
+    align-items: center
+    padding: 4px 8px
+    border-radius: 4px
+    font-size: 13px
+    color: $green-7
+    background-color: lighten($positive, 80%)
+    margin-right: 12px
+  @media (max-width $breakpoint-sm)
+    .notify-card-inner
+      width: 100%
+      padding: 8px 12px
+      justify-content: center
+      border-radius: 0
+      font-size: 15px
+      background-color: lighten($positive, 75%)
+
+.success-color-set
+  color: $green-7
+  background-color: lighten($positive, 80%)
+
+.warning-color-set
+  color: $amber-8
+  background-color: lighten($warning, 80%)
+
+.error-color-set
+  color: #f44336
+  background-color: lighten(#f44336, 80%)
+
+/* Style for icd10 concidence list */
+.icd10-list {
+  width:300px
+  height:300px
+}
+
+.icpc2-tree-wrapper {
+    height: 530px;
+    overflow: auto
+}
+
+
+/* input number arrows */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+
+input[type="number"]
+    -moz-appearance: textfield
+
+// card height
+
+// .q-card
+//   min-height: calc(100vh - 100px)

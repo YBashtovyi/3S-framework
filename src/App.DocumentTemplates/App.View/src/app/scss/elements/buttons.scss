@@ -1,0 +1,63 @@
+.btn { // button
+  display: inline-block;
+  cursor: pointer;
+  padding: 12px 15px;
+  min-width: 40px;
+  min-height: 40px;
+  text-align: center;
+  position: relative;
+
+}
+.btn { // button custom styles
+  border: none;
+  border-radius: 3px;
+  line-height: 1.1;
+  font-family: 'Open Sans';
+  font-weight: 500;
+  font-size: 15px;
+  color: $darkgrey;
+  background-color: $white;
+  -webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.26);
+  -moz-box-shadow:0 2px 5px 0 rgba(0,0,0,.26);
+  box-shadow:0 2px 5px 0 rgba(0,0,0,.26);
+}
+
+.btn--small { // small button for lists
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px;
+  min-width: 31px;
+  min-height: 31px;
+  text-align: center;
+  line-height: 14px;
+  font-family: 'Open Sans';
+}
+.md-button.md-default-theme.md-raised.btn--darkblue , .md-button.md-raised.btn--darkblue,
+.btn--darkblue {
+  color: #ffffff;
+  background-color: #3c465a;
+}
+.md-button.md-default-theme.md-raised.btn--blue , .md-button.md-raised.btn--blue,
+.btn--blue {
+  color: #ffffff;
+  background-color: #406ecd;
+}
+.md-button.md-default-theme.md-raised.btn--green , .md-button.md-raised.btn--green,
+.btn--green { // buttont color
+  color: $white;
+  background-color: $green;
+}
+.md-button.md-default-theme.md-raised.btn--dark , .md-button.md-raised.btn--dark,
+.btn--dark { // buttont color
+  color: $white;
+  background: $dark;
+}
+
+.md-button.md-default-theme.md-raised.btn--white , .md-button.md-raised.btn--white,
+.btn--white { // buttont color
+  color: $darkgrey;
+  background-color: $white;
+}
+.btn--create {
+  float: left;
+}

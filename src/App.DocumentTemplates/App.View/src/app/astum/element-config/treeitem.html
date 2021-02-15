@@ -1,0 +1,42 @@
+<div class="astum-lexical-tree-edit astum-lexical-tree-item">
+    <button ng-show="treeItem.item.ChildsCount" class="tree-node node" ng-click="treeItem.expand(treeItem.item)">
+        <span class="sign" ng-show="treeItem.isExpanded">
+            <i class="fa fa-minus-square-o"></i>
+        </span>
+        <span class="sign" ng-hide="treeItem.isExpanded">
+            <i class="fa fa-plus-square-o"></i>
+        </span>
+    </button>
+    <button class="tree-node" ng-hide="treeItem.item.ChildsCount">
+        <span class="sign">
+            <i class="fa  fa-genderless"></i>
+        </span>
+    </button>
+    <div class="btn-group">
+        <button class="btn btn--small btn--greeen node-action" 
+                ng-click="treeItem.addToNode()">
+            <i class="fa fa-share-alt"></i> 
+        </button> <!-- TODO при нажатии добавлять актовной кнопке класс 'btn--green' -->
+        <button class="btn btn--small"
+                ng-click="treeItem.removeItem()">
+            <i class="fa fa-times"></i>
+        </button>
+        <button class="btn btn--small node-action"
+                ng-click="treeItem.updateNode(treeItem.item)">
+            <i class="fa fa-edit"></i>
+        </button>
+    </div>
+    <span class="label node-value" ng-class="{'node-active':treeItem.item === treeItem.currentNode}"
+          ng-click="treeItem.updateNode(treeItem.item)">{{treeItem.item.Name}}</span>
+</div>
+
+<div class="nodes child-tree" ng-if="treeItem.isExpanded">
+    <md-progress-circular ng-if="treeItem.isLoading" md-mode="indeterminate"></md-progress-circular>
+    <ul class="lexical-tree" ng-if="treeItem.item.tree">
+        <li class="lexical-tree-item" ng-repeat="item in treeItem.item.tree">
+            <astum-tree-item-configure item="item" />
+        </li>
+    </ul>
+</div>
+
+

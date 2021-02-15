@@ -1,0 +1,66 @@
+.new-folder {
+		position: relative;
+
+	&--input {
+		width: 100%;
+		padding-right: 115px;
+
+		&-name {
+			width: 100%;
+			border: 1px solid #e3e3e3;
+			border-radius: 2px;
+
+		}
+	}
+
+	&--buttons {
+		position: absolute;
+		right: 0;
+		top: 0;
+
+
+	}
+
+	&--button {
+		padding: 6px 12px;
+	    font-size: 24px;
+	    margin: 0 2px;
+	    transition: background 0.3s ease;
+	    border-radius: 2px;
+
+	    .fa {
+	   		transition: color 0.3s ease;
+
+	    }
+
+
+		&:hover {
+			background: #bebebe;
+		}
+
+
+			&-save {
+
+				&:hover {
+
+					.fa {
+						color: green;
+					}
+
+				}
+			}
+			
+			&-cancel {
+
+				&:hover {
+
+					.fa {
+						color: red;
+					}
+
+				}
+			}
+
+
+	}
+}

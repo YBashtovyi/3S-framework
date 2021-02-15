@@ -1,0 +1,32 @@
+﻿
+@import "~quill/dist/quill.core.css";
+@import "~quill/dist/quill.snow.css";
+@import "~angular-material/angular-material.min.css";
+@import 'scss/_main.scss';
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #464646;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-height: 100vh;
+    background: #E9F2ED;
+}
+body{
+    width: 100%;
+    min-width: 512px;
+    &.fixed{
+        position: fixed;
+    }
+}
+app{
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+  background: #fafafa;
+}

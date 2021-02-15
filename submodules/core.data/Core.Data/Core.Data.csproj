@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Dto\Atu\pgsql\BaseCityListDto.sql" />
+    <None Remove="Dto\Atu\pgsql\BaseCountryListDto.sql" />
+    <None Remove="Dto\Atu\pgsql\BaseRegionListDto.sql" />
+    <None Remove="Dto\Cdn\pgsql\BaseEmployeeSpecialityDetailDto.sql" />
+    <None Remove="Dto\Cdn\pgsql\BaseEmployeeSpecialityListDto.sql" />
+    <None Remove="Dto\Common\pgsql\BaseEnumRecordDto.sql" />
+    <None Remove="Dto\Common\pgsql\BaseExPropertyCoTypeDto.sql" />
+    <None Remove="Dto\Common\pgsql\BaseExPropertyDto.sql" />
+    <None Remove="Dto\Common\pgsql\BaseNotificationDto.sql" />
+    <None Remove="Dto\Common\pgsql\BaseNotificationReceiverDto.sql" />
+    <None Remove="Dto\Common\pgsql\BasePersonDetailDto.sql" />
+    <None Remove="Dto\Common\pgsql\BasePersonListDto.sql" />
+    <None Remove="Dto\System\pgsql\BaseCryptoSignFieldSettingDto.sql" />
+    <None Remove="Dto\System\pgsql\BaseSysEvaluatedValueDto.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Dto\Atu\pgsql\BaseCountryListDto.sql" />
+    <EmbeddedResource Include="Dto\Atu\pgsql\BaseCityListDto.sql" />
+    <EmbeddedResource Include="Dto\Atu\pgsql\BaseRegionListDto.sql" />
+    <EmbeddedResource Include="Dto\Cdn\pgsql\BaseEmployeeSpecialityDetailDto.sql" />
+    <EmbeddedResource Include="Dto\Cdn\pgsql\BaseEmployeeSpecialityListDto.sql" />
+    <EmbeddedResource Include="Dto\Common\pgsql\BaseEnumRecordDto.sql" />
+    <EmbeddedResource Include="Dto\Common\pgsql\BaseExPropertyCoTypeDto.sql" />
+    <EmbeddedResource Include="Dto\Common\pgsql\BaseExPropertyDto.sql" />
+    <EmbeddedResource Include="Dto\Common\pgsql\BaseNotificationDto.sql" />
+    <EmbeddedResource Include="Dto\Common\pgsql\BaseNotificationReceiverDto.sql" />
+    <EmbeddedResource Include="Dto\Common\pgsql\BasePersonDetailDto.sql" />
+    <EmbeddedResource Include="Dto\Common\pgsql\BasePersonListDto.sql" />
+    <EmbeddedResource Include="Dto\System\pgsql\BaseCryptoSignFieldSettingDto.sql" />
+    <EmbeddedResource Include="Dto\System\pgsql\BaseSysEvaluatedValueDto.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Core.Base">
+      <HintPath>..\Shared\lib\netstandard2.1\Core.Base.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

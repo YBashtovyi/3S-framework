@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Dto\pgsql\BaseDocumentTemplateDto.sql" />
+    <None Remove="Dto\pgsql\DocTemplateDto.sql" />
+    <None Remove="Dto\pgsql\DocumentTemplateDetailDto.sql" />
+    <None Remove="Dto\pgsql\DocumentTemplateListDto.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Dto\pgsql\DocumentTemplateListDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseDocumentTemplateDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\DocumentTemplateDetailDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\DocTemplateDto.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Templates\**\*" CopyToPublishDirectory="Always" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+    <PackageReference Include="TemplateEngine.Docx" Version="1.1.5" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\submodules\app.core\src\Core.Business\Core.Business.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="Aspose.Words">
+      <HintPath>3rdParty\Aspose.Words.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

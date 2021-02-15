@@ -1,0 +1,113 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Dto\pgsql\BaseEhealthAccreditationDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthActiveSubstanceDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthAddressDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthArchiveDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthAuthenticationMethodDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthBaseContractDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthContractDivisonDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthContractDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthDeclarationDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthDictionaryDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthDispensesDetailDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthDivisionDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthDocumentDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthEducationDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthEmployeeDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthEntityRelationDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthExternalDivisionDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthExternalOrganizationDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthIncomingMedicalReferralDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthInternationalNonproprietaryNameDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthLicenseDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthMedicalReferralCategoryDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthMedicalServiceProgramDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthMedicineActionUnitMeasuresDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthMedicineManufacturer.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthMedicineManufacturingCountryDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthMedicineReimbursementDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthMedicineReleaseFormDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthMedicineTakingMethodDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthMedicineUnitMeasuresDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthOrganizationDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthOutgoingMedicalReferralDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthParticipationInMedicalProgramDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthPaymentDetailDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthPaymentTermsDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthPersonDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthPharmacyDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthPhoneDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthQualificationDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthServiceCatalogGroupDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthServiceCatalogServiceDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthServiceCatalogServiceInGroupDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthSpecialityDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthVerificateDocumentUrlDto.sql" />
+    <None Remove="Dto\pgsql\BaseReimbursementProgramDto.sql" />
+    <None Remove="Dto\pgsql\BaseEhealthHealthCareServiceDto.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthExternalDivisionDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthExternalOrganizationDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthIncomingMedicalReferralDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthOutgoingMedicalReferralDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthParticipationInMedicalProgramDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthServiceCatalogServiceDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthServiceCatalogGroupDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthMedicalReferralCategoryDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthDispensesDetailDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthMedicalServiceProgramDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthServiceCatalogServiceInGroupDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthVerificateDocumentUrlDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthPharmacyDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthActiveSubstanceDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthBaseContractDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthContractDivisonDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthMedicineReimbursementDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthEntityRelationDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseReimbursementProgramDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthDictionaryDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthInternationalNonproprietaryNameDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthMedicineManufacturer.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthMedicineManufacturingCountryDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthMedicineReleaseFormDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthMedicineActionUnitMeasuresDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthMedicineTakingMethodDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthPaymentTermsDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthMedicineUnitMeasuresDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthPaymentDetailDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthContractDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthDeclarationDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthEmployeeDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthAccreditationDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthAddressDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthArchiveDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthDocumentDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthLicenseDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthPersonDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthAuthenticationMethodDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthPhoneDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthDivisionDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthEducationDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthQualificationDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthSpecialityDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthOrganizationDto.sql" />
+    <EmbeddedResource Include="Dto\pgsql\BaseEhealthHealthCareServiceDto.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.6.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Core.Base">
+      <HintPath>..\Shared\lib\netstandard2.1\Core.Base.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

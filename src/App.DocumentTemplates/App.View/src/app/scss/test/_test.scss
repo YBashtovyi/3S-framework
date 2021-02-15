@@ -1,0 +1,22 @@
+.test {
+  border: 1px solid red !important;
+  &1 {
+    border: 1px dotted blue !important;
+  }
+  &2 {
+    border: 1px solid darkmagenta !important;
+  }
+  &3 {
+    border: 1px double purple;
+  }
+}
+
+.md-select.md-default-theme.ng-invalid.ng-touched .md-select-value, md-select.ng-invalid.ng-touched .md-select-value {
+  color: inherit !important;
+  border-bottom: none !important;
+}
+
+.md-select.ng-required.ng-invalid:not(.md-no-asterisk) .md-select-value span:first-child:after, md-select[required].ng-invalid:not(.md-no-asterisk) .md-select-value span:first-child:after {
+  content: '' !important;
+}
+

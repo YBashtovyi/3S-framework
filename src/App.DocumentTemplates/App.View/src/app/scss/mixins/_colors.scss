@@ -1,0 +1,60 @@
+$grey: #ddd;
+$white: #fff;
+$lightgrey: #fcfcfc;
+$bggrey: #f5f6fa;
+$darkgrey: #828999;
+$green: #26A69A;
+$darkgreen: #00796B;
+$darkred:#d32f2f;
+$darktext: #3c465a;
+$redtext: #ff0000;
+$dark: rgba(0, 0, 0, 0.8);
+$light: rgba(0, 0, 0, 0.3);
+$red: #ff0000;
+
+
+
+$font-stack: 'Open Sans', Arial, sans-serif;
+
+.grey {
+  background: $grey;
+
+  &-text {
+    color: $grey;
+  }
+}
+.white {
+  background: $white;
+
+  &-text {
+    color: $white;
+  }
+}
+.darkgrey {
+  background: $darkgrey;
+
+  &-text {
+    color: $darkgrey;
+  }
+}
+.green {
+  background: $green;
+
+  &-text {
+    color: $green;
+  }
+}
+.red {
+  background: $redtext;
+
+  &-text {
+    color: $redtext;
+  }
+}
+.lightgrey {
+  background: $lightgrey;
+
+  &-text {
+    color: $lightgrey;
+  }
+}

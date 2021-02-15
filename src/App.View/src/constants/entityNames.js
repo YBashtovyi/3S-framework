@@ -1,0 +1,6 @@
+export const Appointment = "Appointment"
+export const Encounter = "Encounter"
+export const Episode = "Episode"
+export const EhealthOutgoingMedicalReferral = "EhealthOutgoingMedicalReferral"
+export const DiagnosticReport = "DiagnosticReport"
+export const MedicalExamination = "MedicalExamination"

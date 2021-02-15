@@ -1,0 +1,10 @@
+<div class="breadcrumbs">
+<span ng-click="bread.goTo(null)" class="clearfix">
+  <!-- <svg class="icon-svg icon-left"><use xlink:href="/assets/dicom.svg#hor-dots"></use></svg> -->
+  <svg class="icon-svg icon-left">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></g>
+  </svg>
+  </span>
+  <span ng-repeat="item in bread.crumbs" ng-click="bread.goTo(item)"> / {{item.caption}}</span>
+</div>

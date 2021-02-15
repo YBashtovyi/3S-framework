@@ -1,0 +1,50 @@
+//Saved options for paste into text tips
+.options.options--list {
+  padding: 0;
+  width: 100%;
+  margin: 0;
+  background: $white;
+  border:1px solid #e1e5ed;
+  cursor: pointer;
+
+  & .options--list--item {
+    position: relative;
+
+    & .material-icons {
+      position: absolute;
+      color: $grey;
+      font-size: 16px;
+      top:0;
+      left:0;
+    }
+
+    & .item--content {
+      text-align: left;
+      padding:0;
+      line-height: 36px;
+      font-size: 14px;
+      font-family: "Open Sans", sans-serif;
+      color: $darktext;
+      padding:0 8px;
+
+
+
+    }
+
+  }
+}
+// Tip to save chose text
+.addTip {
+  transform: translateX(-50%);
+
+  & .material-icons {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    font-size:16px ;
+  }
+  & .white-text {
+    padding-left: 24px;
+    line-height: 16px;
+  }
+}

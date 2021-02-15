@@ -1,0 +1,16 @@
+
+    <ul class="checklist checklist-inline-cancel">
+        <li class="checklist--item box" ng-repeat="item in config.items">
+            {{item.Name}}
+            <button class="btn button" type="button" ng-click="config.editValue(item)">
+                <i class="fa fa-edit"></i>
+            </button>
+            <button class="btn button" type="button" ng-click="config.deleteValue(item)">
+                <i class="fa fa-times"></i>
+            </button>
+        </li>
+        <li class="checklist--item">
+            <input class="input input-border item-input" type="text" ng-model="config.checkValue" placeholder="Введіть значення" />
+            <button class="btn button" type="button" ng-click="config.postValue(config.checkValue)"><i class="fa fa-floppy-o"></i></button>
+        </li>
+    </ul>

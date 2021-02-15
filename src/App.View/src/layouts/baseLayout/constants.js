@@ -1,0 +1,1 @@
+export const BEFORE_LOGOUT_URL = "BEFORE_LOGOUT_URL"

@@ -1,0 +1,294 @@
+$dist--sm: 4px;
+$dist--md: 8px;
+$dist--lg: 16px;
+
+.tree { // lexical tree
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+    webkit-transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1);
+    transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1);
+    max-height: 200px;
+    overflow-y: auto;
+}
+.btn { // button
+  display: inline-block;
+  cursor: pointer;
+  padding: 12px 15px;
+  min-width: 40px;
+  min-height: 40px;
+  text-align: center;
+  position: relative;
+  @include transition(.5s ease-in-out);
+&.ng-leave{
+  @include transition(0s);
+
+}
+}
+.btn { // button custom styles
+  border: none;
+  border-radius: 3px;
+  line-height: 1.1;
+  font-family: 'Open Sans';
+  font-weight: 500;
+  font-size: 15px;
+  color: $darkgrey;
+  background-color: $white;
+  -webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.26);
+  -moz-box-shadow:0 2px 5px 0 rgba(0,0,0,.26);
+  box-shadow:0 2px 5px 0 rgba(0,0,0,.26);
+}
+
+.btn--small { // small button for lists
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px;
+  min-width: 31px;
+  min-height: 31px;
+  text-align: center;
+  line-height: 14px;
+  font-family: 'Open Sans';
+}
+.md-button.md-default-theme.md-raised.btn--darkblue , .md-button.md-raised.btn--darkblue,
+.btn--darkblue {
+  color: #ffffff;
+  background-color: #3c465a;
+}
+.md-button.md-default-theme.md-raised.btn--blue , .md-button.md-raised.btn--blue,
+.btn--blue {
+  color: #ffffff;
+  background-color: #406ecd;
+}
+.md-button.md-default-theme.md-raised.btn--green , .md-button.md-raised.btn--green,
+.btn--green { // buttont color
+  color: $white;
+  background-color: $green;
+}
+.md-button.md-default-theme.md-raised.btn--dark, .md-button.md-raised.btn--dark,
+.btn--dark { // buttont color
+    color: $white;
+    background: $dark;
+}
+.md-button.md-default-theme.md-raised.btn--darkgreen, .md-button.md-raised.btn--darkgreen,
+.btn--darkgreen { // buttont color
+    color: $white;
+    background: $darkgreen;
+}
+.md-button.md-default-theme.md-raised.btn--darkred, .md-button.md-raised.btn--darkred,
+.btn--darkred { // buttont color
+    color: $white;
+    background: $darkred;
+}
+
+.md-button.md-default-theme.md-raised.btn--white , .md-button.md-raised.btn--white,
+.btn--white { // buttont color
+  color: $darkgrey;
+  background-color: $white;
+}
+.textarea { // light grey background for text blocks
+  border: none;
+  background: $lightgrey;
+  resize: none;
+  padding: $dist--sm $dist--md;
+  line-height: 1.2;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: #3c465a;    display: block;
+  width: 100%;
+
+}
+.input { //
+  border: none;
+  padding: $dist--sm $dist--md;
+  //background: $lightgrey;
+}
+.shadow-block { // shadow styles
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 10px;
+}
+.margin-bottom {
+  margin-bottom: $dist--md;
+}
+.btn--save {
+  display: block;
+  margin: auto;
+}
+.checkbox {
+  display: inline-block;
+
+}
+.checkbox--green {
+  margin-bottom: 0;
+  &.md-checked .md-icon {
+    background-color: rgb(30, 200, 200);
+  }
+  &.md-checked .md-icon:after {
+    border-color: rgb(255, 255, 255);
+  }
+}
+.tab-form__item {
+  position: relative;
+  z-index: 5;
+}
+.btn--nopad {
+  padding: 8px 15px;
+}
+.btn--create {
+  float: left;
+}
+
+.button-group--right {
+  float: right;
+}
+.input-border {
+  background-color: #ffffff;
+  border: 2px solid #e1e5ed;
+}
+.btn--group {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.btn--group--center {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+}
+.b-mrg {
+  margin-bottom: 8px;
+}
+.edit-item{
+  position: relative;
+  z-index: 8;
+}
+
+.hide-element {
+    display: none;
+  }
+[contentEditable=true]:empty:not(:focus):before{
+  content:attr(placeholder);
+}
+// design_b Start
+.document {
+  // background: #f5f6fa;
+}
+.document-body {
+  width: 100%;
+}
+
+// design_b end
+template-constructor{
+    user-select:none;
+}
+
+template-constructor .tabs button {
+  width: 50%;
+  text-align: center;
+  box-sizing: border-box;
+  float: left;
+  padding: 15px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.tabs {
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+  background-color: #1ec8c8;
+  position: relative;
+
+}
+// design_b Start
+
+.document-body {
+  width: 100%;
+  //max-width: 1170px;
+  //margin: auto;
+  //background: #fff;
+}
+
+// design_b end
+//.tab {
+//  padding: 16px;
+//}
+.templateDetails .label {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3c465a;
+  padding: 0 8px 0 0px;
+  float: left;
+}
+
+// design_b Start
+.label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #3c465a;
+    padding: 0 8px 0 0px;
+    display: inline-block;
+    float: none;
+
+    &.node-active {
+        font-weight: bold;
+        color: $green;
+    }
+}
+
+// design_b end
+.constructor-panel + .constructor-panel {
+  margin-top: 8px;
+}
+.constructor-panel .label {
+  margin-bottom: 4px;
+}
+.shadow--block {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+  // design_b Start
+  background: #fff;
+
+  // design_b end
+}
+.btn--circle {
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+}
+.value {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #3c465a;
+  display: inline-block;
+  z-index:1;
+}
+.constructor-panel {
+  clear: both;
+}
+.template-slot, .template-element {
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  line-height: 24px;
+  margin: 4px auto;
+  padding: 11px 16px 11px 32px;
+  min-height:0;
+}
+.template-slot .material-icons, .template-element .material-icons {
+  visibility: visible;
+//  font-size: 20px;
+//  position: absolute;
+//  left: 8px;
+//  top:15px;
+}

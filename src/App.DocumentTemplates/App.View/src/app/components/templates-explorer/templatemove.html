@@ -1,0 +1,8 @@
+<div class="selected">{{tmove.item.caption}}</div>
+
+<span ng-click="tmove.onFolderClick(null)">...</span>
+<tree items="tmove.folders" label="caption"
+      nested="Templates"
+      on-change="tmove.onFolderClick"></tree>
+
+<button class="btn" ng-click="tmove.onSelect()">Обрати</button>

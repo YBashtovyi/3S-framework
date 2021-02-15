@@ -1,0 +1,12 @@
+<div>
+    <div>
+        <label class="label">Шаблон</label>
+        <select ng-model="tcopy.templateId" ng-options="template.id as template.Name for template in tcopy.config.templateList track by template.id">
+            <option value="" ng-show="false"></option>
+        </select>  
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-green" ng-click="tcopy.close(true,tcopy.templateId)">Так</button>
+        <button type="button" class="btn btn-blue" ng-click="tcopy.close(false,tcopy.templateId)">Ні</button>
+    </div>
+</div>

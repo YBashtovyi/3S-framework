@@ -1,0 +1,79 @@
+node_modules/
+package-lock.json
+
+# Visual Studio cache/options directory
+.vs/
+# Visual Studio Code
+src/.vscode
+.vscode/
+
+# webStorm cache/options directory
+.idea/
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.dbmdl
+*.jfm
+
+Temp/
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+
+# Packages
+packages/
+# TestResults
+TestResults/
+
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Xx][Mm][Ll][Dd]ocumentation/
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!*.[Cc]ache/
+
+# Typescript v1 declaration files
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+src/App.Api/logs/
+
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+src/App.DB/App.DB.jfm
+/src/App.Api/appsettings.Dev-bash.json
+/src/App.View/src/store/store-flag.d.ts
+/src/App.View/src-pwa/pwa-flag.d.ts

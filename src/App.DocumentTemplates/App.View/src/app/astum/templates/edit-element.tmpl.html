@@ -1,0 +1,46 @@
+<label class="doc-element__title"
+       ng-click="docEl.edit()"
+       ng-class="{
+        'label-block':docEl.item.panel.config.showName == 'block',
+        'inline-title':docEl.item.panel.config.showName == 'inline',
+        'label-hide':docEl.item.panel.config.showName == 'hide'
+     }">
+    {{docEl.item.panel.Name}}:
+    <!--{{docEl.item.panel.config}}-->
+</label>
+
+
+<div ng-show="docEl.mode==='View'"
+    <span class="elvalue editable-value"
+          ng-click="docEl.setMode(Edit)"         
+          class="break-word">
+        <div ng-switch="docEl.item.panel.controlTypeCode"
+             class="editable-element--panel">
+            <span ng-switch-when="DATE"
+                  class="editable-element--content">
+                {{docEl.item.panel.value | calendarToDate }}
+            </span>
+            <astum-quill-viewer ng-switch-when="TEXTEDIT|LEXTREE|TEXT" ng-switch-when-separator="|"
+                                value="docEl.item.panel.value">
+            </astum-quill-viewer>
+            <span ng-switch-when="BIT">
+                <i ng-show="docEl.item.panel.value" class="fa  fa-check-square-o"></i>
+                <i ng-hide="!!docEl.item.panel.value" class="fa  fa-square-o"></i>
+            </span>
+            <span ng-switch-default class="editable-value--default">
+                {{docEl.item.panel.value}}
+            </span>
+        </div>
+    </span>
+</div>
+<div ng-show="docEl.mode==='Edit'" class="tab-form__item">
+</div>
+<div ng-if="!docEl.isDocValid && docEl.item.errors" class="error">
+
+    <!--<div ng-repeat="error in docEl.item.errors"></div>-->
+        <span ng-show="docEl.item.errors[0].required">Обов'язкове поле.</span>
+        <span ng-show="docEl.item.errors[0].requiredIf">Поле  необхідно  заповнити, оскільки заповнене поле: {{docEl.item.errors[0].caused.panel.Name}}.</span>       
+        <span ng-show="docEl.item.errors[0].pattern">Некоректні дані</span>
+    
+</div>
+

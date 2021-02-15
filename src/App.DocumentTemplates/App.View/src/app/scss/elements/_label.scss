@@ -1,0 +1,15 @@
+.label {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3c465a;
+  padding: 0 8px 0 0px;
+  display: inline-block;
+  float: none;
+
+  &.node-active {
+    font-weight: bold;
+    color: $green;
+  }
+}

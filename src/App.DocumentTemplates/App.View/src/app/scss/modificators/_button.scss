@@ -1,0 +1,45 @@
+.btn:hover {
+  -webkit-box-shadow:  0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow:  0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow:  0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.btn--green.md-button.md-default-theme.md-raised:not([disabled]):hover, .btn--green.md-button.md-raised:not([disabled]):hover,
+.btn--green:hover, .btn--green:hover, .btn--green.hover {
+    background-color: #21d9d9;
+    //color: $white;
+}
+
+.btn--blue:hover, .btn--blue:active, .btn--blue.hover {
+  background-color: #5E7EC3;
+}
+
+.md-button.md-raised:not([disabled]).btn:hover, .md-button.md-raised:not([disabled]).btn:active, .md-button.md-raised:not([disabled]).btn.hover
+.btn:hover, .btn:active, .btn.hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.options.options--list {
+    & .options--list--item {
+        & .item--content:hover,
+        & .item--content:active,
+        & .item--content:focus,
+        & .item--content.active {
+            background: #d0e5e5;
+            color: #686868;
+            /*background: $green;
+            color: $white;*/
+        }
+    }
+}
+md-select.md-default-theme:not([disabled]):focus .md-select-value, md-select:not([disabled]):focus .md-select-value {
+  border-bottom-color: $green;
+  border-bottom-color: transparent;
+}
+md-input-container.md-input-focused:not(.md-input-has-value) md-select.md-default-theme .md-select-value.md-select-placeholder, md-input-container.md-input-focused:not(.md-input-has-value) md-select .md-select-value.md-select-placeholder{
+  color: $green;
+}
+.md-button.md-default-theme.md-raised.btn--blue:hover, .md-button.md-raised.btn--blue:hover, .btn--blue:hover,
+.md-button.md-default-theme.md-raised.btn--blue:active, .md-button.md-raised.btn--blue:active, .btn--blue:active
+.md-button.md-default-theme.md-raised.btn--blue:focus, .md-button.md-raised.btn--blue:focus, .btn--blue:focus{
+    background: #d0e5e5;
+    color: #686868;
+}

@@ -1,0 +1,83 @@
+astum-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+    .selected{
+        min-height:20px;
+    }
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;    
+    max-height: 100%;
+    overflow: auto;
+    >div{
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    position:absolute;
+    top:10px;
+    right:10px;
+    font-size: 28px;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.close:hover,
+.close:focus {
+    color: #232323;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    min-height: 43px;
+    padding: 2px 16px;
+    background-color: #009688;
+    color: white;
+    position: relative;
+
+}
+
+.modal-body {
+    min-height:100px;
+    padding: 2px 16px;
+    background-color: #fefefe;
+    md-select .md-select-value{
+        border: 1px solid red;
+        z-index: 101;
+        .md-select-placeholder{
+            z-index: 101;
+        }
+    }
+}
+
+.modal-footer {
+    min-height:10px;
+    padding: 2px 16px;
+    background-color: #009688;
+    color: white;
+}

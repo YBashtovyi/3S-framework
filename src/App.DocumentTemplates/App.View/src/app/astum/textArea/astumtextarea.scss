@@ -1,0 +1,56 @@
+﻿@import "../../scss/mixins/_colors";
+astum-textarea {
+    position: relative;
+
+    .addTip {
+        position: absolute;
+        display: none;
+        z-index: 1001;
+
+        &:before {
+            top: -10px;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            border-bottom-color: $dark;
+            border-width: 5px;
+            margin-left: 1px;
+            left: 20%;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+    }
+
+    .options {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        overflow: hidden;
+        z-index: 1000;
+        border-radius: 0;
+        border-bottom: none;
+        margin-bottom: 0;
+
+        li {
+            overflow: hidden;
+
+            a {
+                display: block;
+                padding: 10px;
+                font-size: 15px;
+                line-height: 1.4;
+                color: #808080;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,339 @@
+@font-face {
+  font-family: 'telemed';
+  src:  url('fonts/telemed.eot?3bh6y');
+  src:  url('fonts/telemed.eot?3bh6y#iefix') format('embedded-opentype'),
+    url('fonts/telemed.ttf?3bh6y') format('truetype'),
+    url('fonts/telemed.woff?3bh6y') format('woff'),
+    url('fonts/telemed.svg?3bh6y#telemed') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'telemed' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-manufacturer:before {
+  content: "\e900";
+}
+.icon-presciptions:before {
+  content: "\e901";
+}
+.icon-patient-ecard:before {
+  content: "\e902";
+}
+.icon-patient-card:before {
+  content: "\e903";
+}
+.icon-hospital:before {
+  content: "\e904";
+}
+.icon-payment-terms:before {
+  content: "\e905";
+}
+.icon-taking-method:before {
+  content: "\e906";
+}
+.icon-manufacture-country:before {
+  content: "\e907";
+}
+.icon-prescription:before {
+  content: "\e908";
+}
+.icon-pharmacy:before {
+  content: "\e909";
+}
+.icon-report:before {
+  content: "\e90a";
+}
+.icon-coordinator:before {
+  content: "\e90b";
+}
+.icon-clipboard-health:before {
+  content: "\e90c";
+}
+.icon-health-case:before {
+  content: "\e90d";
+}
+.icon-clipboard:before {
+  content: "\e90e";
+}
+.icon-health-doc:before {
+  content: "\e90f";
+}
+.icon-e-heart:before {
+  content: "\e910";
+}
+.icon-unit-measure:before {
+  content: "\e911";
+}
+.icon-medicines:before {
+  content: "\e912";
+}
+.icon-nurse:before {
+  content: "\e913";
+}
+.icon-doctor:before {
+  content: "\e914";
+}
+.icon-tubes:before {
+  content: "\e915";
+}
+.icon-release-form:before {
+  content: "\e916";
+}
+.icon-first-aid-kit:before {
+  content: "\e917";
+}
+.icon-active-substance:before {
+  content: "\e918";
+}
+.icon-inn:before {
+  content: "\e919";
+}
+.icon-cardiogram:before {
+  content: "\e91a";
+}
+.icon-mortar:before {
+  content: "\e91b";
+}
+.icon-ehd-reimburse:before {
+  content: "\e91c";
+}
+.icon-reimburse:before {
+  content: "\e91d";
+}
+.icon-medication:before {
+  content: "\e91e";
+}
+.icon-medical-history:before {
+  content: "\e91f";
+}
+.icon-404:before {
+  content: "\e920";
+}
+.icon-user:before {
+  content: "\e921";
+}
+.icon-user-md:before {
+  content: "\e922";
+}
+.icon-user-admin:before {
+  content: "\e923";
+}
+.icon-user-edit:before {
+  content: "\e924";
+}
+.icon-user-tag:before {
+  content: "\e925";
+}
+.icon-user-settings:before {
+  content: "\e926";
+}
+.icon-user-circle:before {
+  content: "\e927";
+}
+.icon-user-book:before {
+  content: "\e928";
+}
+.icon-user-book-solid:before {
+  content: "\e929";
+}
+.icon-user-card:before {
+  content: "\e92a";
+}
+.icon-user-card-solid:before {
+  content: "\e92b";
+}
+.icon-user-phone:before {
+  content: "\e92c";
+}
+.icon-user-clipboard:before {
+  content: "\e92d";
+}
+.icon-user-catalog:before {
+  content: "\e92e";
+}
+.icon-poll:before {
+  content: "\e92f";
+}
+.icon-clipboard-warning:before {
+  content: "\e930";
+}
+.icon-clipboard-done:before {
+  content: "\e931";
+}
+.icon-clipboard-text:before {
+  content: "\e932";
+}
+.icon-clipboard-med:before {
+  content: "\e933";
+}
+.icon-file-contract-sign:before {
+  content: "\e934";
+}
+.icon-telemed:before {
+  content: "\e935";
+}
+.icon-diagnostic:before {
+  content: "\e936";
+}
+.icon-dictionary-info:before {
+  content: "\e937";
+}
+.icon-analitical:before {
+  content: "\e938";
+}
+.icon-med-doctor:before {
+  content: "\e939";
+}
+.icon-services:before {
+  content: "\e93a";
+}
+.icon-file-chart:before {
+  content: "\e93b";
+}
+.icon-file-report:before {
+  content: "\e93c";
+}
+.icon-file-analytics:before {
+  content: "\e93d";
+}
+.icon-person:before {
+  content: "\e93e";
+}
+.icon-file-contract:before {
+  content: "\e93f";
+}
+.icon-file-invoice:before {
+  content: "\e940";
+}
+.icon-file-heartbeat:before {
+  content: "\e941";
+}
+.icon-file-med:before {
+  content: "\e942";
+}
+.icon-file-sign:before {
+  content: "\e943";
+}
+.icon-file-desc:before {
+  content: "\e944";
+}
+.icon-file-collection:before {
+  content: "\e945";
+}
+.icon-dictionary-collection:before {
+  content: "\e946";
+}
+.icon-dictionary:before {
+  content: "\e947";
+}
+.icon-dictionary-med:before {
+  content: "\e948";
+}
+.icon-case-med:before {
+  content: "\e949";
+}
+.icon-laptop-med:before {
+  content: "\e94a";
+}
+.icon-box-med:before {
+  content: "\e94b";
+}
+.icon-comment-med:before {
+  content: "\e94c";
+}
+.icon-chat:before {
+  content: "\e94d";
+}
+.icon-chat-warning:before {
+  content: "\e94e";
+}
+.icon-error:before {
+  content: "\e94f";
+}
+.icon-info:before {
+  content: "\e950";
+}
+.icon-error-outline:before {
+  content: "\e951";
+}
+.icon-report1:before {
+  content: "\e952";
+}
+.icon-heartbeat:before {
+  content: "\e953";
+}
+.icon-stethoscope:before {
+  content: "\e954";
+}
+.icon-microscope:before {
+  content: "\e955";
+}
+.icon-calendar:before {
+  content: "\e956";
+}
+.icon-attachment:before {
+  content: "\e957";
+}
+.icon-settings:before {
+  content: "\e958";
+}
+.icon-search:before {
+  content: "\e959";
+}
+.icon-edit:before {
+  content: "\e95a";
+}
+.icon-print:before {
+  content: "\e95b";
+}
+.icon-home:before {
+  content: "\e95c";
+}
+.icon-clinic-med:before {
+  content: "\e95d";
+}
+.icon-business:before {
+  content: "\e95e";
+}
+.icon-clinic-logo:before {
+  content: "\e95f";
+}
+.icon-telemed-link:before {
+  content: "\e960";
+}
+.icon-filter-setting:before {
+  content: "\e961";
+}
+.icon-filter:before {
+  content: "\e962";
+}
+.icon-pills:before {
+  content: "\e963";
+}
+.icon-medical-referral:before {
+  content: "\e964";
+}
+.icon-incoming-medical-referral:before {
+  content: "\e965";
+}
+.icon-service-in-program:before {
+  content: "\e966";
+}
+.icon-service:before {
+  content: "\e967";
+}

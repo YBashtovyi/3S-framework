@@ -1,0 +1,350 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\..\..\..\NuGet\Packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\..\..\NuGet\Packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\..\..\..\NuGet\Packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\..\..\NuGet\Packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{04231047-59D4-448C-AD0A-8AC2B9EAD1AE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App.View</RootNamespace>
+    <AssemblyName>App.View</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="src\app\app.scss" />
+    <Content Include="src\app\astum\copy-template\copydialog.html" />
+    <Content Include="src\app\astum\dropdown\dropdown.html" />
+    <Content Include="src\app\astum\tree\tree.html" />
+    <Content Include="src\app\astum\tree\treeItem.html" />
+    <Content Include="src\app\components\account\account.html" />
+    <Content Include="src\app\astum\autocomplete\astum.autocomplete.html" />
+    <Content Include="src\app\astum\calendar\astum.calendar.html" />
+    <Content Include="src\app\astum\checkList\astum.checklist.html" />
+    <Content Include="src\app\astum\dialog\dialog.html" />
+    <Content Include="src\app\astum\element-config\list-configure.html" />
+    <Content Include="src\app\astum\docElement\astum.docelement.html" />
+    <Content Include="src\app\astum\element-config\tree.html" />
+    <Content Include="src\app\astum\element-config\treeitem.html" />
+    <Content Include="src\app\astum\element-config\values.html" />
+    <Content Include="src\app\astum\lexicalTree\astum.lexicaltree.html" />
+    <Content Include="src\app\astum\lexicalTree\astum.lexicaltreeitem.html" />
+    <TypeScriptCompile Include="src\app\astum\copy-template\astum.templatecopy.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\copy-template\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\directives\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\dropdown\dropdown.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\dropdown\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\directives\astum.transclude.directive.ts" />
+    <TypeScriptCompile Include="src\app\astum\tree\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\tree\tree.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\tree\treeItem.component.ts" />
+    <TypeScriptCompile Include="src\app\common\explorer\base.explorermove.controller.ts" />
+    <TypeScriptCompile Include="src\app\components\account\account.controller.ts" />
+    <TypeScriptCompile Include="src\app\astum\calendar\astum.calendar.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\calendar\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\dialog\astum.dialog.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\dialog\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\element-config\tree.configure.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\element-config\tree.item.configure.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\element-config\values.configure.ts" />
+    <TypeScriptCompile Include="src\app\astum\modal\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\quillviewer\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\quillviewer\astum.quillviewer.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\services\auth\auth.interseptor.ts" />
+    <TypeScriptCompile Include="src\app\astum\services\auth\oidc.interseptor.ts" />
+    <Content Include="src\app\astum\modal\astum.modal.html" />
+    <Content Include="src\app\astum\quillviewer\astum.quillviewer.html" />
+    <Content Include="src\app\astum\templates\bit.tmpl.html" />
+    <Content Include="src\app\astum\templates\check-list.tmpl.html" />
+    <Content Include="src\app\astum\templates\calendar.tmpl.html" />
+    <Content Include="src\app\astum\templates\edit-element.tmpl.html" />
+    <Content Include="src\app\astum\templates\number.tmpl.html" />
+    <Content Include="src\app\astum\templates\sector.tmpl.html" />
+    <Content Include="src\app\astum\templates\spreadssheet.tmpl.html" />
+    <Content Include="src\app\astum\templates\text-block.tmpl.html" />
+    <Content Include="src\app\astum\templates\text-tree.tmpl.html" />
+    <Content Include="src\app\astum\templates\textarea.tmpl.html" />
+    <Content Include="src\app\astum\templates\textedit.tmpl.html" />
+    <Content Include="src\app\astum\textBlock\astum.textblock.html" />
+    <Content Include="src\app\astum\texteditor\astum.texteditor.html" />
+    <Content Include="src\app\components\account\services.html" />
+    <Content Include="src\app\components\constructor\constructor.html" />
+    <Content Include="src\app\components\constructor\template-elements\template-elements.html" />
+    <Content Include="src\app\components\constructor\template-element\template-element.html" />
+    <Content Include="src\app\components\custom-element\custom-element.html" />
+    <Content Include="src\app\components\docs-explorer\docmove.html" />
+    <Content Include="src\app\components\docs-explorer\docsexplorer.html" />
+    <Content Include="src\app\components\document\document.html" />
+    <TypeScriptCompile Include="src\app\astum\autocomplete\astum.autocomplete.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\autocomplete\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\checkList\astum.checklist.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\checkList\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\element-config\base.configure.controller.ts" />
+    <TypeScriptCompile Include="src\app\astum\element-config\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\element-config\list.configure.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\lexicalTree\astum.lexicaltree.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\lexicalTree\astum.lexicaltreeitem.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\lexicalTree\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\modal\astum.modal.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\modal\astum.modal.service.ts" />
+    <TypeScriptCompile Include="src\app\astum\models\common.models.ts" />
+    <TypeScriptCompile Include="src\app\astum\services\auth\auth.service.ts" />
+    <TypeScriptCompile Include="src\app\astum\services\auth\oidc.service.ts" />
+    <TypeScriptCompile Include="src\app\astum\services\dragManager\dragmanager.service.ts" />
+    <TypeScriptCompile Include="src\app\astum\services\frame\frame.service.ts" />
+    <TypeScriptCompile Include="src\app\astum\services\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\spreadsSheet\astum.spreadsSheet.component.ts" />
+    <Content Include="src\app\astum\spreadsSheet\astum.spreadsSheet.html" />
+    <TypeScriptCompile Include="src\app\astum\spreadsSheet\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\templates\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\textArea\astum.textarea.component.ts" />
+    <Content Include="src\app\astum\textArea\astum.textarea.html" />
+    <TypeScriptCompile Include="src\app\astum\docElement\astum.docelement.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\docElement\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\textArea\index.ts" />
+    <Content Include="src\app\components\folder\folder.html" />
+    <Content Include="src\app\components\home\home.scss" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="src\app\astum\bread-crumbs\breadcrumbs.html" />
+    <Content Include="src\app\components\templates-explorer\templatemove.html" />
+    <Content Include="src\app\components\templates-explorer\templates-explorer.html" />
+    <Content Include="src\app\astum\values-tree\valuestree.html" />
+    <Content Include="src\assets\745.gif" />
+    <Content Include="src\callback.html" />
+    <Content Include="src\oidc-client.js" />
+    <Content Include="tsconfig.json" />
+    <Content Include="webpack.config.js" />
+    <Content Include="src\app\astum\textArea\astumtextarea.scss" />
+    <Content Include="src\app\astum\lexicalTree\astum.lexicaltree.scss" />
+    <Content Include="src\app\scss\blocks\_pannels.scss" />
+    <Content Include="src\app\scss\blocks\_tips.scss" />
+    <Content Include="src\app\scss\blocks\_tree.scss" />
+    <Content Include="src\app\scss\elements\_base.scss" />
+    <Content Include="src\app\scss\elements\_elements.scss" />
+    <Content Include="src\app\scss\mixins\_colors.scss" />
+    <Content Include="src\app\scss\modificators\_button.scss" />
+    <Content Include="src\app\scss\_main.scss" />
+    <Content Include="src\app\astum\docElement\astumDocElement.scss" />
+    <Content Include="src\app\scss\elements\tabs.scss" />
+    <Content Include="src\app\astum\textBlock\astumTextBlock.scss" />
+    <Content Include="src\app\components\templates-explorer\templates.scss" />
+    <Content Include="src\app\scss\elements\_checklists.scss" />
+    <Content Include="src\app\astum\checkList\checkList.scss" />
+    <Content Include="src\app\scss\elements\buttons.scss" />
+    <Content Include="src\app\scss\elements\_label.scss" />
+    <Content Include="src\app\scss\elements\_input-field.scss" />
+    <Content Include="src\app\scss\elements\_headerSelect.scss" />
+    <Content Include="src\app\scss\elements\_header-breadcrumbs.scss" />
+    <Content Include="src\app\scss\blocks\constructor.style.scss" />
+    <Content Include="src\app\scss\blocks\_document.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\app.html" />
+    <Content Include="src\app\common\nav\nav.html" />
+    <Content Include="src\app\components\about\about.html" />
+    <Content Include="src\app\components\home\home.html" />
+    <Content Include="src\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\textBlock\astum.textblock.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\textBlock\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\texteditor\astum.texteditor.component.ts" />
+    <TypeScriptCompile Include="src\app\astum\texteditor\index.ts" />
+    <TypeScriptCompile Include="src\app\common\explorer\baseExplorer.controller.ts" />
+    <TypeScriptCompile Include="src\app\common\index.ts" />
+    <TypeScriptCompile Include="src\app\common\nav\index.ts" />
+    <TypeScriptCompile Include="src\app\common\nav\nav.component.ts" />
+    <TypeScriptCompile Include="src\app\common\nav\nav.service.ts" />
+    <TypeScriptCompile Include="src\app\components\about\about.component.ts" />
+    <TypeScriptCompile Include="src\app\components\about\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\bread-crumbs\index.ts" />
+    <TypeScriptCompile Include="src\app\components\account\index.ts" />
+    <TypeScriptCompile Include="src\app\components\account\services.component.ts" />
+    <TypeScriptCompile Include="src\app\components\constructor\constructor.component.ts" />
+    <TypeScriptCompile Include="src\app\components\constructor\index.ts" />
+    <TypeScriptCompile Include="src\app\components\constructor\template-elements\template-elements.component.ts" />
+    <TypeScriptCompile Include="src\app\components\constructor\template-element\template-element.component.ts" />
+    <TypeScriptCompile Include="src\app\components\custom-element\custom-element.component.ts" />
+    <TypeScriptCompile Include="src\app\components\custom-element\custom-element.service.ts" />
+    <TypeScriptCompile Include="src\app\components\custom-element\index.ts" />
+    <TypeScriptCompile Include="src\app\components\docs-explorer\doc-move.component.ts" />
+    <TypeScriptCompile Include="src\app\components\docs-explorer\docsexplorer.component.ts" />
+    <TypeScriptCompile Include="src\app\components\docs-explorer\index.ts" />
+    <TypeScriptCompile Include="src\app\components\document\document.component.ts" />
+    <TypeScriptCompile Include="src\app\components\document\index.ts" />
+    <TypeScriptCompile Include="src\app\components\folder\folder.component.ts" />
+    <TypeScriptCompile Include="src\app\components\folder\index.ts" />
+    <TypeScriptCompile Include="src\app\components\home\home.component.ts" />
+    <TypeScriptCompile Include="src\app\components\home\index.ts" />
+    <TypeScriptCompile Include="src\app\components\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\bread-crumbs\astum.breadcrumbs.component.ts" />
+    <TypeScriptCompile Include="src\app\components\templates-explorer\index.ts" />
+    <TypeScriptCompile Include="src\app\components\templates-explorer\template-move.controller.ts" />
+    <TypeScriptCompile Include="src\app\components\templates-explorer\templates-explorer.component.ts" />
+    <TypeScriptCompile Include="src\app\components\templates-explorer\templates-explorer.service.ts" />
+    <TypeScriptCompile Include="src\app\astum\values-tree\index.ts" />
+    <TypeScriptCompile Include="src\app\astum\values-tree\valuestree.component.ts" />
+    <TypeScriptCompile Include="src\app\index.ts" />
+    <TypeScriptCompile Include="src\app\lib.d.ts" />
+    <TypeScriptCompile Include="src\app\models\common.models.ts" />
+    <TypeScriptCompile Include="src\app\models\pm.models.ts" />
+    <TypeScriptCompile Include="src\app\models\vm.models.ts" />
+    <TypeScriptCompile Include="src\app\services\base.service.ts" />
+    <TypeScriptCompile Include="src\app\services\constructor.service.ts" />
+    <TypeScriptCompile Include="src\app\astum\services\data.service.ts" />
+    <TypeScriptCompile Include="src\app\services\document.service.ts" />
+    <TypeScriptCompile Include="src\app\services\documentPrint.service.ts" />
+    <TypeScriptCompile Include="src\app\services\element-values.ts" />
+    <TypeScriptCompile Include="src\app\services\global.config.ts" />
+    <TypeScriptCompile Include="src\app\services\utils.ts" />
+    <TypeScriptCompile Include="src\app\vendor.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\astum\calendar\astum.calendar.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\astum\spreadsSheet\astum.spreadsSheet.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\scss\blocks\loader.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\scss\blocks\_documents-explorer.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\scss\blocks\_folder.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\scss\blocks\_head-buttons.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\astum\modal\modal.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\components\document\document.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\components\account\services.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\scss\blocks\_dropdown.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\scss\elements\svg-sprite.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\scss\elements\_flex.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\scss\blocks\_select.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\scss\blocks\_services.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\scss\blocks\_form.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\scss\blocks\_edit-element.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\scss\blocks\_document-top-menu.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\scss\mixins\_style-mixins.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\scss\modificators\_animation.scss" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58267</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58267/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

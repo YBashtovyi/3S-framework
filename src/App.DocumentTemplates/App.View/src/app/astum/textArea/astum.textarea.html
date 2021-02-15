@@ -1,0 +1,7 @@
+<div class="editor"></div>
+<button class="btn btn--narrow btn--small btn--dark addTip" ng-click="control.storeTip($event)"><i class="material-icons">&#xE161;</i><span class="white-text">Запам'ятати</span></button>
+<ul class="options options--list shadow-block" ng-show="control.showTips && control.list.length">
+    <li class="options--list--item" ng-repeat="tip in control.list" ng-click="control.insertTip(tip)">
+        <a ng-class="{'active':tip===control.activeTip}" class="item--content">{{tip['contentValue']}}</a>
+    </li>
+</ul>

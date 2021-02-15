@@ -1,0 +1,54 @@
+@import "../mixins/_colors.scss";
+
+.head--content {
+
+    .button-group .btn,
+    .btn {
+      box-shadow: none !important;
+      font-size: 18px;
+      line-height: 18px;
+      padding: 4px;
+      background: transparent;
+      min-width: 22px;
+      min-height: 22px;
+      border-radius: 0;
+      color: $black;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: $button-hover-background!important;
+      }
+    }
+    .md-input-has-value,
+    .md-select-value.md-select-placeholder {
+      border: 1px solid $select-border!important;
+      padding: 1px 4px!important;
+      line-height: 21px;
+      min-height: 21px;
+      background: $white;
+    }
+
+    .md-select-placeholder.md-select-value span {
+        font-size: 14px;
+        line-height: 14px;
+        padding: 0;
+        color: $black!important;
+        transform: none!important;
+        transition: none!important;
+    }
+
+    md-input-container {
+        padding: 0;
+        min-width: 240px;
+    }
+    .md-input-has-value label {
+        display: none;
+    }
+    .md-select-value {
+        border: none;
+        padding: 0;
+        font-size: 14px;
+        font-style: normal;
+        line-height: 18px;
+    }
+}

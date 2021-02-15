@@ -1,0 +1,12 @@
+$dist--sm: 4px;
+$dist--md: 8px;
+$dist--lg: 16px;
+
+.input { //
+  border: none;
+  padding: $dist--sm $dist--md;
+}
+.input-border {
+  background-color: #ffffff;
+  border: 2px solid #e1e5ed;
+}

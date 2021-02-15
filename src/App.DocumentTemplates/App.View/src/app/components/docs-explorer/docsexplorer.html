@@ -1,0 +1,114 @@
+<div class="explorer documents-explorer">
+    <div class="container">
+        <div class="documents-explorer--content">
+            <div class="toolbar">
+                <a class="toolbar-item" ng-click="explorer.addFolder()">
+                    <!-- <i class="material-icons">create_new_folder</i> -->
+                    <!-- <svg class="icon-svg icon-left"><use xlink:href="/assets/dicom.svg#icon-create-new-folder"></use></svg> -->
+                    <svg class="icon-svg icon-left">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path d="M20 6h-8l-2-2H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-1 8h-3v3h-2v-3h-3v-2h3V9h2v3h3v2z" />
+                    </svg>
+                    <span>Додати папку</span>
+                </a>
+                <a class="toolbar-item" ng-click="explorer.addItem()">
+                    <!-- <i class="material-icons">note_add</i> -->
+                    <!-- <svg class="icon-svg icon-left"><use xlink:href="/assets/dicom.svg#icon-note-add"></use></svg> -->
+                    <svg class="icon-svg icon-left">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 14h-3v3h-2v-3H8v-2h3v-3h2v3h3v2zm-3-7V3.5L18.5 9H13z" />
+                    </svg>
+                    <span>Додати документ</span>
+                </a>
+            </div>
+            <ul class="documents-explorer--list list">
+                <li class="documents-explorer--list-item list-item--breadcrumb">
+                    <bread-crumbs crumbs="explorer.path" on-click="explorer.onItemClick(crumb)"></bread-crumbs>
+                    <div class="new-folder newFolder">
+                        <div class="new-folder--input">
+                            <input class="new-folder--input-name" type="text" ng-model="explorer.searchText" />
+                        </div>
+                        <div class="new-folder--buttons">
+                            <button class="new-folder--button new-folder--button-save" ng-click="explorer.search()" title="Пошук"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            <button class="new-folder--button new-folder--button-cancel" ng-click="explorer.clear()" title="Відміна"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </li>
+                <!-- <li class="documents-explorer--list-item list-item" ng-if="explorer.path.length" ng-click="explorer.onItemClick()">
+                    <a class="list-item--link" ng-click="explorer.onItemClick()"> -->
+                <li class="documents-explorer--list-item list-item" ng-if="explorer.explorerService.parents.length">
+                    <a ng-click="explorer.onItemClick(null)">
+                        <span>
+                            <!-- <svg class="icon-svg icon-left"><use xlink:href="/assets/dicom.svg#arrow-left"></use></svg> -->
+                            <svg class="icon-svg icon-left">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path d="M11 9l1.42 1.42L8.83 14H18V4h2v12H8.83l3.59 3.58L11 21l-6-6 6-6z" /></g>
+                            </svg>
+                        </span>
+                        <span>
+                            <!-- <svg class="icon-svg icon-left"><use xlink:href="/assets/dicom.svg#hor-dots"></use></svg> -->
+                            <svg class="icon-svg icon-left">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" /></g>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+                <li class="documents-explorer--list-item documents-explorer--new-folder list-item" ng-if="explorer.showFolderForm">
+                    <folder parent-id="explorer.parentId"
+                            on-submit="explorer.submitFolder(folder)"
+                            on-cancel="explorer.cancelAddingFolder()"></folder>
+
+                </li>
+                <li class="documents-explorer--list-item list-item clearfix" ng-repeat="item in explorer.items" ng-click="explorer.onItemClick(item)">
+                    <a class="list-item--link flex" ng-click="explorer.onItemClick(item)">
+                        <span class="list-item-block list-item--ico flex-col">
+                            <!-- <svg class="icon-svg icon-left" ng-if="item.classShortCode=='F'"><use xlink:href="/assets/dicom.svg#folder"></use></svg> -->
+                            <svg class="icon-svg icon-left" ng-if="item.classShortCode=='F'">
+                                <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
+                                <path d="M0 0h24v24H0z" fill="none" /></g>
+                            </svg>
+                            <!-- <svg class="icon-svg icon-left" ng-if="item.classShortCode=='D'"><use xlink:href="/assets/dicom.svg#file"></use></svg> -->
+                            <svg class="icon-svg icon-left" ng-if="item.classShortCode=='D'">
+                                <path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z" />
+                                <path d="M0 0h24v24H0z" fill="none" /></g>
+                            </svg>
+                        </span>
+
+                        <span class="list-item-block list-item--name flex-col">
+                            {{item.caption}}
+                        </span>
+                        <span class="list-item-block list-item--ico flex-col">
+
+                            <!-- <svg class="icon-svg icon-left" ng-if="item.recordState ==1"><use xlink:href="/assets/dicom.svg#unchecked-circle"></use></svg>
+                            <svg class="icon-svg icon-left" ng-if="item.recordState ==2"><use xlink:href="/assets/dicom.svg#checked-circle"></use></svg> -->
+
+                            <svg class="icon-svg icon-left" ng-if="item.recordState ==2">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                            </svg>
+                            <svg class="icon-svg icon-left" ng-if="item.recordState ==1">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                                <path d="M0 0h24v24H0z" fill="none" /></g>
+                            </svg>
+                            <!-- <i class="material-icons" ng-if="item.recordState ==1">radio_button_unchecked</i> -->
+                            <!-- <i class="material-icons" ng-if="item.recordState ==2">check_circle</i> -->
+                        </span>
+                        <span class="list-item-block list-item--ico flex-col">
+                            <i ng-click="explorer.moveDocDialog(item,$event)" class="fa fa-clipboard"></i>
+                        </span>
+                        <span class="list-item-block list-item--ico flex-col">
+                            <i ng-click="explorer.removeItem(item,$event)" class="fa fa-times"></i>
+                            <!-- <svg viewBox="0 0 24 24" width="24"  height="24"  class="icon-clear icon-svg icon-right" ng-click="explorer.removeItem(item,$event)"><use xlink:href="/assets/dicom.svg#close"/></svg> -->
+
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<astum-modal modal-id="doc-move-dialog">
+    <doc-move config="modal.config" on-answer="modal.callbackWrapper"></doc-move>
+</astum-modal>

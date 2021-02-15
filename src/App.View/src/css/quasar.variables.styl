@@ -1,0 +1,60 @@
+// Quasar Stylus Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Stylus variables found in Quasar's source Stylus files.
+
+// Check documentation for full list of Quasar variables
+
+// It's highly recommended to change the default colors
+// to match your app's branding.
+// Tip: Use the "Theme Builder" on Quasar's documentation website.
+
+// /$primary   = #4e69a2
+$primary =  #4274A7
+$secondary = #4274A7
+$accent    = #0178BC
+$readonly  = #828999
+
+$positive = $green-6
+$negative = #d04f45
+$info = #0178BC
+$warning = $amber-4
+
+$typography-font-family = 'Source Sans Pro', sans-serif
+$body-font-size   = 15px
+
+$font-black = #333
+$transition = all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+$primary-light = lighten($primary, 90%)
+$primary-dark-light = lighten($primary, 80%)
+$negative-light = lighten($negative, 90%)
+$warning-light = lighten(#ffd54f, 90%)
+$positive-light = lighten(#4caf50, 90%)
+
+
+// linear-gradient(90deg, #07C, #82ca9a)
+
+gradient(opacity)
+  background: rgb(1,120,188);
+  background: -moz-linear-gradient(90deg, rgba(1,120,188,opacity) 0%, rgba(49,143,148,opacity) 51%, rgba(94,197,140,opacity) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(1,120,188,opacity) 0%, rgba(49,143,148,opacity) 51%, rgba(94,197,140,opacity) 100%);
+  background: linear-gradient(90deg, rgba(1,120,188,opacity) 0%, rgba(49,143,148,opacity) 51%, rgba(94,197,140,opacity) 100%);
+
+gradient-bottom(opacity)
+  background: rgb(1,120,188);
+  background: -moz-linear-gradient(0deg, rgba(94,197,140,opacity) 0%, rgba(49,143,148,opacity) 51%,  rgba(1,120,188,opacity) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(94,197,140,opacity) 0%, rgba(49,143,148,opacity) 51%,  rgba(1,120,188,opacity) 100%);
+  background: linear-gradient(0deg, rgba(94,197,140,opacity) 0%, rgba(49,143,148,opacity) 51%,  rgba(1,120,188,opacity) 100%);
+
+gradient-diagonal(opacity)
+  background: rgb(1,120,188);
+  background: -moz-linear-gradient(230deg, rgba(94,197,140,opacity) 0%, rgba(49,143,148,opacity) 51%,  rgba(1,120,188,opacity) 100%);
+  background: -webkit-linear-gradient(230deg, rgba(94,197,140,opacity) 0%, rgba(49,143,148,opacity) 51%,  rgba(1,120,188,opacity) 100%);
+  background: linear-gradient(230deg, rgba(94,197,140,opacity) 0%, rgba(49,143,148,opacity) 51%,  rgba(1,120,188,opacity) 100%);
+
+gradient-green(opacity)
+  background: rgb(94,197,140);
+  background: -moz-linear-gradient(230deg, rgba(94,197,140,opacity) 50%, rgba(49,143,148,opacity) 100%);
+  background: -webkit-linear-gradient(230deg, rgba(94,197,140,opacity) 50%, rgba(49,143,148,opacity) 100%);
+  background: linear-gradient(230deg, rgba(94,197,140, opacity) 50%, rgba(49,143,148 ,opacity) 100%);
+

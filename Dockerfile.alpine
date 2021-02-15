@@ -1,0 +1,45 @@
+#ARG VERSION=3.1-alpine3.10
+#FROM mcr.microsoft.com/dotnet/core/sdk:$VERSION AS build-env
+FROM mcr.microsoft.com/dotnet/sdk:5.0-alpine AS build-env
+RUN apk add --no-cache git
+
+WORKDIR /app
+COPY . .
+
+# Pull submodules
+CMD git submodule sync --recursive
+RUN git submodule sync --recursive && git submodule update --init --recursive
+
+WORKDIR /app/src/App.Api
+
+RUN dotnet restore \
+    && dotnet build \
+    && dotnet publish -c Release -o output
+
+#RUN dotnet restore App.WebAPI.csproj
+
+#FROM mcr.microsoft.com/dotnet/core/aspnet:$VERSION AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:5.0-alpine AS runtime
+LABEL maintainer="..."
+LABEL description="..."
+
+WORKDIR /app
+
+ARG VERSION_VALUE
+ENV VERSION_VALUE=$VERSION_VALUE
+
+# Set timezone UTC +2
+ENV TZ=Europe/Kiev
+
+COPY --from=build-env /app/src/App.Api/output .
+COPY --from=build-env /app/src/App.Data/Migrations/Sql ./sql
+COPY --from=build-env /app/xmldocumentation ./xmldocumentation
+#COPY --from=build-env /app/submodules/App.Core/xmldocumentation ./xmldocumentation
+
+RUN echo ls -la 
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
+    && echo $TZ > /etc/timezone
+
+EXPOSE 5051
+ENTRYPOINT ["dotnet", "App.WebAPI.dll", "--urls", "http://0.0.0.0:5051"]

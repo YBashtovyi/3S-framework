@@ -1,0 +1,26 @@
+<div class="calendar-header">
+    <i class="fa fa-arrow-circle-left"  ng-click="control.previous()"></i>
+    <a class="calendar-zoom calendar-zoom-year" href="">
+        <span>{{control.month.format("MMMM")}}</span>
+    </a>
+    <a class="calendar-zoom calendar-zoom-month" href="">
+        <span>{{control.month.format(" YYYY")}}</span>
+    </a>
+    <i class="fa fa-arrow-circle-right"  ng-click="control.next()"></i>
+</div>
+</div>
+<div class="week-names">
+    <span class="week-day-name">Sun</span>
+    <span class="week-day-name">Mon</span>
+    <span class="week-day-name">Tue</span>
+    <span class="week-day-name">Wed</span>
+    <span class="week-day-name">Thu</span>
+    <span class="week-day-name">Fri</span>
+    <span class="week-day-name">Sat</span>
+</div>
+<div class="week-dates" ng-repeat="week in control.weeks">
+    <span class="week-day-date" 
+          ng-class="{ 'selected': day.date.isSame(control.selected, 'day'), 'today': day.isToday, 'different-month': !day.isCurrentMonth }" 
+          ng-click="control.select(day)" 
+          ng-repeat="day in week.days">{{day.number}}</span>
+</div>

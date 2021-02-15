@@ -1,0 +1,8 @@
+﻿{{sheet}}
+
+<table>
+    <tr ng-repeat="row in sheet.rows">
+        <td ng-repeat="cell in row">{{cell.value}}</td>
+    </tr>
+    <tr><span ng-click="sheet.addRow">add row</span></tr>
+</table>
