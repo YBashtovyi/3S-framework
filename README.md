@@ -2,7 +2,14 @@
 
 Single Software Solution - demo 
 
-# How to install
+# Front-end
+https://github.com/YBashtovyi/3S-framework/tree/main/src/App.View
+
+# Back-end (WebApi)
+https://github.com/YBashtovyi/3S-framework/tree/main/src/App.View
+
+
+# How to install Redis
  
 After cloning the repository :
 
