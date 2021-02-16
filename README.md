@@ -3,7 +3,7 @@
 Single Software Solution - demo 
 
 # Front-end
-https://github.com/YBashtovyi/3S-framework/tree/main/src/App.View
+https://github.com/YBashtovyi/3S-framework/tree/main/src/App.Api
 
 # Back-end (WebApi)
 https://github.com/YBashtovyi/3S-framework/tree/main/src/App.View
