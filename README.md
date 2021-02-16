@@ -5,8 +5,7 @@ Single Software Solution - demo
 https://github.com/YBashtovyi/3S-framework/tree/main/src/App.View
 
 # Back-end  
-main solution  : https://github.com/YBashtovyi/3S-framework/3S.WebAPI.sln
-WebApi project folder : https://github.com/YBashtovyi/3S-framework/tree/main/src/App.Api
+main solution  : https://github.com/YBashtovyi/3S-framework/3S.WebAPI.sln, WebApi project folder : https://github.com/YBashtovyi/3S-framework/tree/main/src/App.Api
 
 # How to install Redis
  
